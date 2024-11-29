@@ -215,9 +215,9 @@ header a:hover {
 /* ############# VIDEO DE FONDO ############# */
 .media-container {
   display: block;
+  background-color: #333;
   position: relative;
   min-height: 100vh;
-  /* z-index: -1000; */
 }
 
 .video-container {
