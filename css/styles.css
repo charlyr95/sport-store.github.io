@@ -1,0 +1,529 @@
+/* ############# IMPORTS #############*/
+/* @import url("https://fonts.googleapis.com/css2?family=Kolker+Brush&display=auto"); */
+
+
+
+/* ############# ESTILO GENERALES ############# */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+html {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header {
+  color: #f0f0f0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: block;
+}
+
+.color-primary {
+  color: orange;
+}
+
+a {
+  color: #555555;
+}
+
+a:hover {
+  color: #1a1c27;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Fuentes y tamaños por defecto */
+html {
+  font-size: 62.5%;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  /* font-family: Verdana, Geneva, sans-serif; */
+  font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+body,
+p,
+ul,
+li {
+  font-size: 1.5rem;
+}
+
+.weight-bold {
+  font-weight: bold;
+}
+
+/* Barra de scroll - Oculta */
+html {
+  /* overflow-y: scroll; */
+  scrollbar-width: none;
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+} */
+
+
+
+/* ############# HEADER ############# */
+header {
+  display: block;
+  opacity: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1a1c27;
+}
+
+header a {
+  color: #f0f0f0;
+}
+
+header a:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Header especial para la página de inicio */
+.header-transparent {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to bottom, #000000, #00000000);
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+}
+
+/* Branding (Logo y título) */
+.branding-title {
+  margin-right: 20px;
+  width: max-content;
+  font-family: "Kolker Brush", cursive;
+  font-weight: 200;
+  font-size: 10.8rem;
+  line-height: 60%;
+}
+
+.branding-title::after {
+  content: attr(data-content);
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: orange;
+  transition: all 0.5s ease;
+}
+
+/* Animación underline del branding */
+.branding:hover .branding-title::after {
+  width: 100%;
+}
+
+.branding-primary-color {
+  transition: color 0.3s ease-in-out;
+}
+
+.branding-primary-color:hover {
+  color: orange;
+}
+
+/* Navegación principal */
+.nav-container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.nav-container a {
+  color: #ffffff;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-container a:hover {
+  background-color: #ffae009d;
+}
+
+
+
+/* ############# VIDEO DE FONDO ############# */
+.media-container {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  z-index: -1000;
+}
+
+.video-container {
+  object-fit: cover;
+  max-width: 100%;
+  line-height: 1;
+  border: none;
+}
+
+.media-container video::before {
+  background-color: #000E1D;
+  --background-overlay: "";
+}
+
+.media-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+video {
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+/* Slogan */
+.slogan-container {
+  display: block;
+  margin-left: 20px;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  z-index: 1;
+}
+
+#slogan {
+  color: #FFF;
+  font-size: 6rem;
+  text-shadow: 2px 2px 10px #000000;
+}
+
+/* Arrow down */
+.arrow-down {
+  position: relative;
+  transform: translate(-50%, -100%);
+  top: calc(90% - max(3%, 50px));
+  left: 50%;
+  width: max(3%, 50px);
+  cursor: pointer;
+}
+
+.media-container img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px #000;
+  opacity: 20%;
+}
+
+/* TODO: Arreglar Index */
+.media-container img:hover {
+  opacity: 100%;
+}
+
+
+/* ############# MAIN CONTAINER ############# */
+.main-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+
+
+/* ############# FOOTER ############# */
+footer {
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 2px solid #e0e0e0;
+}
+
+footer p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  text-underline-offset: 2px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+
+/* ############# FORMS ############# */
+form {
+  display: block;
+  margin: 30px auto;
+  color: #333;
+}
+
+.contact-form {
+  min-width: 500px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+
+
+/* ############# SOBRE NOSOTROS ############# */
+
+.main-container .frame-container {
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.about-us-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  line-height: 1.8;
+}
+
+.about-us-container h2 {
+  margin-top: 20px;
+  color: #007bff;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.about-us-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-us-container ul li {
+  margin-bottom: 10px;
+}
+
+.about-us-container ul li:last-child {
+  margin-bottom: 0;
+  /* Quita el márgen del último hijo */
+}
+
+.about-us-container ul li::marker {
+  color: #007bff;
+}
+
+
+
+
+/* ############# TIENDA ############# */
+/* Contenedor del producto - tipo cuadricula */
+.shop-container {
+  display: block;
+  width: 100%;
+}
+
+.product-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  padding: 0 10%;
+}
+
+.product-container {
+  align-items: center;
+  max-width: 250px;
+  font-size: 1.3rem;
+  font-family: 'Roboto Condensed', sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  /* max-width: fit-content; */
+}
+
+.product-container img {
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+
+.product-category {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.product-description {
+  margin-block: 10px;
+  text-align: justify;
+  color: #777;
+}
+
+.product-price {
+  display: inline-flex;
+  width: 100%;
+  font-weight: bold;
+  /* justify-content: flex-end; */
+}
+
+.product-discount-price {
+  margin-left: auto;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.discounted {
+  text-decoration: line-through;
+  font-weight: normal;
+  color: #777;
+}
+
+
+
+
+
+
+
+
+
+/* Debug */
+/* html {
+    border: solid, red, 1px;
+}
+
+main {
+    border: solid, orange, 1px;
+}
+
+body {
+    border: solid, cyan, 1px;
+}
+
+footer {
+    border: solid, lawngreen, 1px;
+}
+section {
+    border: solid, magenta, 1px;
+}
+header {
+    border: solid, lightcoral, 1px;
+} */
