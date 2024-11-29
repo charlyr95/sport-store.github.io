@@ -34,7 +34,7 @@ header {
 
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 main {
@@ -67,6 +67,7 @@ html {
   /* font-family: Verdana, Geneva, sans-serif; */
   font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
   line-height: 1.6;
+  transition: all 1s ease;
 }
 
 h1 {
@@ -96,7 +97,9 @@ li {
 html {
   /* overflow-y: scroll; */
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
+
 
 /* ::-webkit-scrollbar {
     width: 10px;
@@ -181,9 +184,11 @@ header a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-.branding-primary-color:hover {
+.branding:hover .branding-primary-color {
   color: orange;
 }
+
+
 
 /* Navegación principal */
 .nav-container ul {
@@ -212,7 +217,7 @@ header a:hover {
   display: block;
   position: relative;
   min-height: 100vh;
-  z-index: -1000;
+  /* z-index: -1000; */
 }
 
 .video-container {
@@ -232,8 +237,8 @@ header a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
-  min-height: 100%;
+  /* max-width: 100%; */
+  height: 100vh;
   width: 100%;
 }
 
@@ -247,36 +252,82 @@ video {
 .slogan-container {
   display: block;
   margin-left: 20px;
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
-  z-index: 1;
+  z-index: 1000;
 }
 
 #slogan {
-  color: #FFF;
-  font-size: 6rem;
-  text-shadow: 2px 2px 10px #000000;
+  color: #FFFFFF;
+  font-size: 5rem;
+  font-family: 'Lilita One', sans-serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 5px #000000, 5px 5px 10px #000000, 2px 2px 20px #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#slogan:hover {
+  color: orange;
+}
+
+#slogan::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: orange;
+  transition: all 0.5s ease;
+}
+
+.slogan-container:hover #slogan::after {
+  width: 100%;
 }
 
 /* Arrow down */
 .arrow-down {
-  position: relative;
-  transform: translate(-50%, -100%);
-  top: calc(90% - max(3%, 50px));
+  position: absolute;
+  transform: translate(-50%, -120%);
+  top: 100%;
   left: 50%;
   width: max(3%, 50px);
   cursor: pointer;
+  filter: drop-shadow(2px 2px 3px #000);
 }
+
+/* Arrow up */
+.arrow-up {
+  opacity: 20%;
+  position: sticky;
+  bottom: 0;
+  margin-left: 30px;
+  width: fit-content;
+  transition: opacity .8s ease-out;
+  filter: drop-shadow(2px 2px 3px #000);
+}
+
+.arrow-up:hover {
+  opacity: 100%;
+}
+
+.arrow-up img {
+  width: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
 
 .media-container img {
   width: 100%;
   border-radius: 50%;
   box-shadow: 0px 0px 8px #000;
   opacity: 20%;
+  transition: opacity .8s ease-out
 }
 
-/* TODO: Arreglar Index */
 .media-container img:hover {
   opacity: 100%;
 }
@@ -291,6 +342,10 @@ video {
   flex-direction: column;
   justify-content: space-around;
   gap: 20px;
+}
+
+.main-container img {
+  max-width: 100%;
 }
 
 

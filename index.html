@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Kolker+Brush&display=auto"
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Kolker+Brush&display=auto"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/normalize.css" />
@@ -17,7 +17,7 @@
 
   <body>
     <!-- Encabezado principal -->
-    <header>
+    <header id="top-header">
       <div class="header-container header-transparent">
         <!-- Logo - Marca -->
         <div class="branding">
@@ -54,26 +54,29 @@
         ></video>
       </div>
       <div class="slogan-container">
-        <div id="slogan" style="font-family: 'Bad Script', cursive">
+        <a href="#promotions" id="slogan">
           El movimiento nos une
-        </div>
+        </a>
+      </a>
       </div>
       <div class="arrow-down">
-        <img src="./assets/icons/arrow-down.svg" alt="" />
+        <a href="#promotions"><img src="./assets/icons/arrow-down.svg" alt="" /></a>
       </div>
     </section>
 
+    <!-- Contenido de la página -->
     <main>
-      <!-- Contenido de la página -->
-      <section class="main-container">
+      <section class="main-container" id="promotions">
         <div class="frame-container">
-          <h1>Bienvenidos a KinetiX Sports</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et adipisci
-            dolorum sapiente? Ipsam ipsa asperiores temporibus eveniet officia
-            commodi repudiandae dolor sint, aperiam, reprehenderit minima error
-            quam possimus architecto dolores!
-          </p>
+          <h1 style="text-align: center; margin-top: 0; font-family: 'Lilita One', sans-serif; font-weight: normal;">Bienvenido a KinetiX Sports</h1>
+          <img src="./assets/images/promotions/004049ca-5cc7-40ad-8669-412bebd7d087___22b4eaa843714aa7beda15d9f4621a8b.jpg" alt="">
+          <img src="./assets/images/promotions/4715d7ac-9ae9-4f35-a1eb-d8019cfadccf___223f2e00df93e7cc9d5751f31ac3e4fc.jpg" alt="">
+          <img src="./assets/images/promotions/76938680-e39d-4083-802f-db37ea55440c___80d67cb460940073ed322881aa284a7b.jpg" alt="">
+        </div>
+        <div class="arrow-up">
+          <a href="#top-header">
+            <img src="./assets/icons/arrow-up.svg" alt="" style="position: sticky; top: 20px;">
+          </a>
         </div>
       </section>
     </main>
