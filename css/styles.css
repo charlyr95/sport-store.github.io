@@ -259,6 +259,7 @@ video {
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
+  line-height: 0;
 }
 
 #slogan:hover {
