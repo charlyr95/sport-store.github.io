@@ -154,7 +154,6 @@ header a:hover {
 
 /* Branding (Logo y título) */
 .branding-title {
-  margin-right: 20px;
   width: max-content;
   font-family: "Kolker Brush", cursive;
   font-weight: 200;
@@ -259,7 +258,7 @@ video {
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
-  line-height: 0;
+  line-height: 1;
 }
 
 #slogan:hover {
@@ -554,6 +553,105 @@ form {
 
 
 
+/* Media Query para tablets */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 20px;
+  }
+
+  .branding-title {
+    font-size: 7.2rem;
+  }
+
+  .branding-title {
+    font-size: 7.2rem;
+  }
+
+  .nav-container ul {
+    gap: 12px;
+  }
+
+  .nav-container a{
+    font-size: 1.4rem;
+  }
+
+  .contact-form {
+    min-width: 80%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Media Query para dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .branding-title {
+    font-size: 7.2rem;
+    line-height: 80%;
+    text-align: center;
+  }
+
+  .nav-container ul {
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .contact-form {
+    min-width: 90%;
+    padding: 15px;
+  }
+
+  .about-us-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0 5%;
+  }
+
+  #slogan {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (menores a 480px) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px;
+  }
+
+  .branding-title {
+    font-size: 6rem;
+  }
+
+  .nav-container a {
+    font-size: 1.6rem;
+    padding: 6px 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+    padding: 0 5%;
+  }
+
+  .arrow-up img {
+    width: 60px;
+  }
+}
 
 
 
