@@ -510,12 +510,17 @@ form {
   font-size: 1.3rem;
   font-family: 'Roboto Condensed', sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   cursor: pointer;
+  display: flex;
   /* max-width: fit-content; */
 }
 
+.product-grid .frame-container:hover {
+  box-shadow: 0 4px 10px rgba(94, 143, 216, 0.527);
+  border: 1px solid #99c0fa;
+}
+
 .product-container img {
-  width: calc(100% - 20px);
-  margin: 10px;
+  width: 100%;
 }
 
 .product-category {
@@ -532,15 +537,15 @@ form {
 }
 
 .product-price {
-  display: inline-flex;
   width: 100%;
   font-weight: bold;
-  /* justify-content: flex-end; */
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0px 10px;
 }
 
 .product-discount-price {
-  margin-left: auto;
-  margin-right: 10px;
   color: #007bff;
 }
 
@@ -571,7 +576,7 @@ form {
     gap: 12px;
   }
 
-  .nav-container a{
+  .nav-container a {
     font-size: 1.4rem;
   }
 
@@ -584,6 +589,8 @@ form {
     gap: 12px;
   }
 }
+
+
 
 /* Media Query para dispositivos pequeños (móviles) */
 @media (max-width: 768px) {
@@ -616,9 +623,14 @@ form {
     padding: 15px;
   }
 
+  .main-container .frame-container {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0 5%;
+    padding: 0;
   }
 
   #slogan {
@@ -626,6 +638,8 @@ form {
     text-align: center;
   }
 }
+
+
 
 /* Media Query para pantallas muy pequeñas (menores a 480px) */
 @media (max-width: 480px) {
@@ -638,14 +652,14 @@ form {
   }
 
   .nav-container a {
-    font-size: 1.6rem;
-    padding: 6px 12px;
+    font-size: 1.4rem;
+    padding: 6px 6px;
   }
 
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 8px;
-    padding: 0 5%;
+    padding: 0 0;
   }
 
   .arrow-up img {
@@ -679,3 +693,52 @@ section {
 header {
     border: solid, lightcoral, 1px;
 } */
+
+
+
+/* @media (max-width: 480px) { */
+
+/* .nav-container,
+.nav-container ul,
+.nav-container ul li {
+  width: 100%;
+
+}
+
+.nav-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transform: translateX(-50%);
+}
+
+.burger-menu {
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+#drop-down-menu:checked+.nav-container {
+  transform: translateX(+50%);
+}
+
+.nav-container {
+  transition: all .3s ease-in-out;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+ 
+header {
+  position: fixed;
+}  
+  
+*/
+
