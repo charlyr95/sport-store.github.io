@@ -100,12 +100,12 @@
   <header class="transparent-header">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom border-secondary border-opacity-50">
-      <div class="container-fluid align-items-center">
+      <div class="container-fluid align-items-center z-3">
         <!-- Logo navbar -->
-        <a class="navbar-brand mx-5 text-shadow-sm" href="../index.html">Kineti<span class="text-warning">X
+        <a class="navbar-brand mx-md-5 mx-2 text-shadow-sm z-3" href="../index.html">Kineti<span class="text-warning">X
             Sports</span></a>
         <!-- Botón navbar -->
-        <div class="order-lg-last d-flex gap-2 flex-nowrap ms-lg-3">
+        <div class="order-lg-last d-flex gap-2 flex-nowrap ms-lg-3 z-3">
           <button class="btn btn-outline-light" type="button">
             <i class="bi bi-person"></i>
           </button>
@@ -119,43 +119,46 @@
           </button>
         </div>
         <!-- Contenido navbar -->
-        <div class="collapse navbar-collapse" id="navbarCollapse" style="font-size: 0.9em;">
+        <div class="collapse navbar-collapse z-3" id="navbarCollapse" style="font-size: 0.9em;">
           <ul class="navbar-nav ms-xl-auto me-auto me-xl-auto mb-2 mb-lg-0 d-flex gap-xl-4">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item dropdown" data-bs-theme="dark">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Tienda
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./tienda.html">Explorar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="./tienda.html">Hombre</a></li>
-                <li><a class="dropdown-item" href="./tienda.html">Mujer</a></li>
-                <li><a class="dropdown-item" href="./tienda.html">Niño</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="./tienda.html">Disciplinas</a></li>
-                <li><a class="dropdown-item" href="./tienda.html">Marcas</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./promociones.html">Promociones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./contacto.html">Contacto</a>
-            </li>
+            <div class="z-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown" data-bs-theme="dark">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tienda
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./tienda.html">Explorar</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="./tienda.html?gender=male">Hombre</a></li>
+                  <li><a class="dropdown-item" href="./tienda.html?gender=male">Mujer</a></li>
+                  <li><a class="dropdown-item" href="./tienda.html?age=kid">Niño</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="./tienda.html?show=deport">Disciplinas</a></li>
+                  <li><a class="dropdown-item" href="./tienda.html?show=brand">Marcas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promociones.html">Promociones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </div>
+            <div class="position-absolute w-100 start-0 bg-transparent" style="top: 100%; height: 100vh;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"></div>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
-            <button class="btn btn-outline-light me-2" type="submit">Buscar</button>
+          <form class="d-flex z-2" role="search">
+            <input class="form-control me-2 z-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+            <button class="btn btn-outline-light me-2 z-2" type="submit">Buscar</button>
           </form>
         </div>
       </div>
