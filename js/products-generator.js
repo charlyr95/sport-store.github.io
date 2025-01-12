@@ -30,17 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="product-title fw-bold">${product.title}</div>
                     <ul class="list-unstyled mt-auto mb-0">
                       <li><span class="text-dark-emphasis fw-bold">$${product.price.toLocaleString("es-AR")}</span></li>
-                      <li>${product.installments.quantity} cuotas de: <span class="text-dark-emphasis">$${product.installments.amount.toLocaleString("es-AR")}</span></li>
-                      <li><span class="text-dark-emphasis fw-bold">$${product.transfer_price.toLocaleString("es-AR")}</span> <small class="text-muted">con Transferencia</small></li>
+                      <li>${product.installments_quantity} cuotas de: <span class="text-dark-emphasis">$${(Math.round(product.price / product.installments_quantity)).toLocaleString("es-AR")}</span></li>
+                      <li><span class="text-dark-emphasis fw-bold">$${(Math.round(product.price * 0.0085) * 100).toLocaleString("es-AR")}</span> <small class="text-muted">con Transferencia</small></li>
                     </ul>
                   </div>
                   </div>
                   <div class="m-0 p-0">
                     <div class="buy-button bg-body-tertiary top-0">
                       <div class="p-4 pt-1">
-                        <button class="btn btn-warning w-100 z-5" type="button">
+                        <a href="./producto.html?id=${product.product_id}" class="btn btn-warning w-100 z-5" role="button">
                           Ver producto
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
