@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
 
               <!-- Información del producto -->
-              <div class="col-md-6 mt-5 mt-md-0">
+              <div class="col-md-6 mt-5 mt-md-0 d-flex flex-column gap-2">
                 <h5>${product.vendor}</h5>
                 <h3>${product.title}</h3>
                 <div class="text-muted">
-                  <ul class="list-unstyled mt-auto mb-0">
+                  <ul class="list-unstyled">
                       <li><span class="text-dark-emphasis fw-bold">$${product.price.toLocaleString("es-AR")}</span></li>
                       <li>${product.installments_quantity} cuotas de: <span class="text-dark-emphasis">$${(Math.round(product.price / product.installments_quantity)).toLocaleString("es-AR")}</span></li>
                       <li><span class="text-dark-emphasis fw-bold">$${(Math.round(product.price * 0.0085) * 100).toLocaleString("es-AR")}</span> <small class="text-muted">con Transferencia</small></li>
                     </ul>
                 </div>
-                <p>${product.description || ""}</p>
+                <p class="d-none">${product.description || ""}</p>
 
                 <!-- Opciones de talla -->
-                <div class="mb-3">
+                <div class="">
                   <label for="talla" class="form-label">Talla</label>
                   <select id="talla" class="form-select">
                     ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
@@ -52,16 +52,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <!-- Cantidad -->
-                <div class="mb-5">
+                <div class="">
                   <label for="cantidad" class="form-label">Cantidad</label>
                   <input type="number" id="cantidad" class="form-control" value="1" min="1">
                 </div>
 
                 <!-- Botón de compra -->
                 <button class="btn btn-warning w-100">Agregar al carrito</button>
+                
+                <div class="card" style="font-size: 0.8em;">
+                  <ul class="list-unstyled p-3">
+                    <li>Precio Exclusivo Online</li>
+                    <li>El precio puede variar en nuestras tiendas físicas:</li>
+                    <li>-Tendrás atención personalizada por profesionales especializado</li>
+                    <li>-Ganas la oportunidad de ver, tocar y probar en físico multitud de productos</li>
+                  </ul>
+                </div>
+
               </div>
             </div>
-            </div>
+          </div>
           `;
 
           // Insertar el detalle en el contenedor
