@@ -9,6 +9,15 @@ footer {
   font-size: 0.8rem;
 }
 
+/* Scroll */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+html {
+  overflow-y: visible !important;
+}
+
 /* Sombras textos */
 .text-shadow-sm {
   text-shadow: 1px 1px 3px #000000;
@@ -28,6 +37,10 @@ footer {
   font-size: 40px;
   line-height: 0.5;
   height: 100%;
+}
+
+.font-brand {
+  font-family: 'Kolker Brush', cursive;
 }
 
 /* Video */
