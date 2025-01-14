@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row">
               <!-- Imagen del producto -->
               <div class="col-md-6">
-                <div class="card-image-container position-relative overflow-hidden">
+                <div class="card card-image-container position-relative overflow-hidden">
                   <img src="../assets/images/products/${product.main_image}" class="card-img-top main-image" alt="${product.title}">
                   <img src="../assets/images/products/${product.hover_image}" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="${product.title}">
                 </div>
