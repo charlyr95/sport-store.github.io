@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (product) {
           // Crear el detalle del producto
           const productDetail = `
-          <div class="container my-5">
+          <div class="container">
             <div class="row">
               <!-- Imagen del producto -->
               <div class="col-md-6">
