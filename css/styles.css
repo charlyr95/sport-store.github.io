@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset básico */
 * {
   margin: 0;
@@ -33,14 +34,14 @@ html {
 
 /* Fuente logo */
 .navbar-brand {
-  font-family: 'Kolker Brush', cursive;
+  font-family: "Kolker Brush", cursive;
   font-size: 40px;
   line-height: 0.5;
   height: 100%;
 }
 
 .font-brand {
-  font-family: 'Kolker Brush', cursive;
+  font-family: "Kolker Brush", cursive;
 }
 
 /* Video */
@@ -139,13 +140,13 @@ html {
 }
 
 .product-item:hover .buy-button::before {
-  transition: height 1.15s ease-in-out,  opacity 0.5s ease !important;
+  transition: height 1.15s ease-in-out, opacity 0.5s ease !important;
 }
+
 .product-item:hover .buy-button {
   border-bottom: 1px solid var(--bs-border-color);
   height: 3.5rem;
 }
-
 
 /* Card item */
 .card-image-container .hover-image {
@@ -177,25 +178,6 @@ html {
   font-size: 0.8em;
 }
 
-/* Botones tamaños (Deprecated) */
-/* .custom-product-sizes {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.custom-size-button {
-  min-width: 38px;
-  font-size: 11px;
-  height: 38px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-} */
-
 /* Filtros */
 .range-values {
   display: flex;
@@ -219,8 +201,9 @@ html {
   0% {
     transform: translateX(0%);
   }
-
   100% {
     transform: translateX(-100%);
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
