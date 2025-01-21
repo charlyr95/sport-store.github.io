@@ -109,6 +109,22 @@ html {
   filter: brightness(1);
 }
 
+/* Banner ofertas */
+.moving-banner {
+  flex-shrink: 0;
+  animation: scrollBanner infinite linear;
+  animation-duration: 20s;
+  white-space: nowrap;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* Producto */
 .product-item {
   transition: all 0.3s ease-out, border 0s;
@@ -129,7 +145,6 @@ html {
   height: 0;
   margin: 0;
   padding: 0;
-  /* border-inline: 1px solid var(--bs-border-color); */
   border-left: 1px solid var(--bs-border-color);
   border-right: 1px solid var(--bs-border-color);
   border-top: 0;
@@ -187,23 +202,6 @@ html {
 
 .range-label {
   margin-bottom: 1rem;
-}
-
-/* Banner ofertas */
-.moving-banner {
-  flex-shrink: 0;
-  animation: scrollBanner infinite linear;
-  animation-duration: 20s;
-  white-space: nowrap;
-}
-
-@keyframes scrollBanner {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
