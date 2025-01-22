@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
-
+    
+    try {
+      AOS.init();
+    } catch (error) {
+      console.error("Error al cargar AOS:", error);
+    }
+    
     // Lógica para cada página
     if (path.includes("producto.html")) {
         cargarDetalleProducto();
@@ -50,7 +56,7 @@ function cargarProductos() {
         products.forEach((product, index) => {
           
           const card = `
-              <div class="col product-item z-1">
+              <div class="col product-item z-1" data-aos="flip-right">
                 <div class="product-card-container h-100">
                  <div class="h-100 position-relative p-0">
                   <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
