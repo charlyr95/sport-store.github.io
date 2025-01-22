@@ -1,0 +1,77 @@
+/* Producto */
+.product-item {
+  transition: all 0.3s ease-out, border 0s;
+  z-index: 1 !important;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  z-index: 2 !important;
+}
+
+.product-item .buy-button {
+  overflow: hidden;
+  position: absolute;
+  top: calc(100% - 2px) !important;
+  left: 0;
+  right: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--bs-border-color);
+  border-right: 1px solid var(--bs-border-color);
+  border-top: 0;
+  border-bottom: 0;
+  border-color: var(--bs-border-color-translucent);
+  border-style: groove;
+  transition: height 0.2s ease-in-out;
+}
+
+.product-item:hover .buy-button::before {
+  transition: height 1.15s ease-in-out, opacity 0.5s ease !important;
+}
+.product-item:hover .buy-button {
+  border-bottom: 1px solid var(--bs-border-color);
+  height: 3.5rem;
+}
+
+/* Card item */
+.card-image-container .hover-image {
+  opacity: 0 !important;
+}
+
+.card-image-container:hover .hover-image {
+  opacity: 1 !important;
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-container img {
+  transition: transform 0.5s, opacity 0.15s ease-in-out !important;
+}
+
+.card-image-container:hover img.main-image {
+  transform: scale(1.1);
+}
+
+.card-image-container:hover img.hover-image {
+  transform: scale(1.1);
+}
+
+.card-body {
+  font-size: 0.8em;
+}
+
+/* Filtros */
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.range-label {
+  margin-bottom: 1rem;
+}

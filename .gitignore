@@ -1,5 +1,5 @@
 #Archivos
-*.map
+# *.map
 
 #Carpetas
-/scss/
+# /scss/

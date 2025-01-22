@@ -1,0 +1,42 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  font-size: 0.8rem;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+html {
+  overflow-y: visible !important;
+}
+
+/* Sombras textos */
+.text-shadow-sm {
+  text-shadow: 1px 1px 3px #000000;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.text-shadow-lg {
+  text-shadow: 5px 5px 10px #000000;
+}
+
+// $sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+
+// @each $size, $value in $sizes {
+//   @media (min-width: $value) {
+//     .text-shadow-#{$size} {
+//       text-shadow: 2px 2px 5px #000000;
+//     }
+//   }
+// }
