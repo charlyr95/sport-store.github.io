@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
     
-    try {
-      AOS.init();
-    } catch (error) {
-      console.error("Error al cargar AOS:", error);
-    }
-    
     // Lógica para cada página
     if (path.includes("producto.html")) {
         cargarDetalleProducto();
     } else if (path.includes("tienda.html")) {
         actualizarBreadcrumb();
         cargarProductos();
+    }
+
+    try {
+      AOS.init();
+    } catch (error) {
+      console.error("Error al cargar AOS:", error);
     }
 });
 
@@ -42,7 +42,10 @@ function actualizarBreadcrumb() {
 
 // Utilizado para simular el backend y base de datos
 function cargarProductos() {
-    // Ruta del archivo JSON
+    // Obtener el ID del producto desde la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productGender = urlParams.get("gender");// Ruta del archivo JSON
+
     const jsonUrl = "../js/products-database.json";
   
     // Contenedor de los productos
@@ -55,7 +58,9 @@ function cargarProductos() {
         // Iterar sobre cada producto
         products.forEach((product, index) => {
           
-          const card = `
+          if (!productGender || product.gender === productGender || product.gender === 'unisex') {
+          
+            const card = `
               <div class="col product-item z-1" data-aos="flip-right">
                 <div class="product-card-container h-100">
                  <div class="h-100 position-relative p-0">
@@ -88,10 +93,10 @@ function cargarProductos() {
                     </div>
                 </div>
               </div>
-  
-          `;
-          
-          container.innerHTML += card;
+            `;
+      
+            container.innerHTML += card;
+          }
         });
       })
     .catch(error => console.error("Error al cargar el JSON:", error));
