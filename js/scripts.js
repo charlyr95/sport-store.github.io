@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         cargarProductos();
     }
 
-    try {
-      AOS.init();
-    } catch (error) {
-      console.error("Error al cargar AOS:", error);
-    }
+    // try {
+    //   AOS.init();
+    // } catch (error) {
+    //   console.error("Error al cargar AOS:", error);
+    // }
 });
 
 
@@ -81,9 +81,9 @@ function cargarProductos() {
                       </ul>
                     </div>
                     </div>
-                    <div class="m-0 p-0">
-                      <div class="buy-button bg-body-tertiary top-0">
-                        <div class="p-4 pt-1">
+                    <div class="m-0 p-0 z-2">
+                      <div class="buy-button bg-body-tertiary top-0 z-2">
+                        <div class="p-4 pt-1 z-2">
                           <a href="./producto.html?id=${product.product_id}" class="btn btn-warning w-100 z-5" role="button">
                             Ver producto
                           </a>
