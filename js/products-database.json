@@ -1,40 +1,43 @@
-[{
+[
+  {
     "product_id": "a0fb097ccc",
     "vendor": "Nike",
-    "title": "Zapatillas Running",
-    "price": 102927,
+    "title": "Nike Run Swift 3",
+    "price": 159999,
     "transfer_price": "",
     "is_on_sale": false,
     "discount_percent": 25,
     "installments_quantity": 9,
     "category": "calzado",
-    "product_type": "parte inferior",
+    "product_type": "calzado",
     "gender": "male",
     "quantity_in_stock": 933,
     "sizes": [38, 39, 40, 41, 42, 43],
     "main_image": "1138317-400-400",
     "hover_image": "1138318-400-400"
-}, {
+  },
+  {
     "product_id": "746a2d5fb2",
     "vendor": "Puma",
-    "title": "Zapatillas hombre Fit+",
-    "price": 99281,
+    "title": "Puma Skyrocket Lite Adp",
+    "price": 89999,
     "transfer_price": "",
     "is_on_sale": false,
     "discount_percent": 22,
     "installments_quantity": 12,
     "category": "calzado",
-    "product_type": "conjuntos deportivos",
+    "product_type": "calzado",
     "gender": "male",
     "quantity_in_stock": 220,
     "sizes": [39, 40, 41, 42],
     "main_image": "1230557-400-400",
     "hover_image": "1230558-400-400"
-}, {
+  },
+  {
     "product_id": "d17afb0474",
     "vendor": "Puma",
-    "title": "Zapatillas mujer Fit+",
-    "price": 123856,
+    "title": "Puma Skyrocket Lite Adp Mujer",
+    "price": 84999,
     "transfer_price": "",
     "is_on_sale": true,
     "discount_percent": 25,
@@ -46,55 +49,59 @@
     "sizes": [36, 37, 38, 39, 40, 41],
     "main_image": "1266083-400-400",
     "hover_image": "1266084-400-400"
-}, {
+  },
+  {
     "product_id": "71245f94ea",
     "vendor": "Adidas",
-    "title": "Zapatillas hombre",
-    "price": 91883,
+    "title": "Duramo Sl adidas Sport 78",
+    "price": 99999,
     "transfer_price": "",
     "is_on_sale": true,
     "discount_percent": 12,
     "installments_quantity": 9,
     "category": "calzado",
-    "product_type": "parte inferior",
+    "product_type": "calzado",
     "gender": "male",
     "quantity_in_stock": 998,
     "sizes": [40, 41, 42, 43, 44],
     "main_image": "1299683-400-400",
     "hover_image": "1299684-400-400"
-}, {
+  },
+  {
     "product_id": "d8c95d4f74",
     "vendor": "Adidas",
-    "title": "Zapatillas mujer",
-    "price": 117072,
+    "title": "Adidas Galaxy Star Mujer Rosa",
+    "price": 80115,
     "transfer_price": "",
     "is_on_sale": false,
     "discount_percent": 14,
     "installments_quantity": 3,
     "category": "calzado",
-    "product_type": "bolsos y mochilas",
+    "product_type": "calzado",
     "gender": "female",
     "quantity_in_stock": 72,
-    "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+    "sizes": [35, 36, 37, 38, 39, 40, 41, 42],
     "main_image": "1300061-400-400",
     "hover_image": "1300062-400-400"
-}, {
+  },
+  {
     "product_id": "12ae29bd05",
     "vendor": "Nike",
-    "title": "Zapatillas hombre",
-    "price": 85579,
+    "title": "Nike Air Zoom Pegasus 39",
+    "price": 160999,
     "transfer_price": "",
     "is_on_sale": false,
-    "discount_percent": 24,
+    "discount_percent": 30,
     "installments_quantity": 1,
     "category": "calzado",
-    "product_type": "traje de baño",
+    "product_type": "calzado",
     "gender": "male",
     "quantity_in_stock": 677,
-    "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+    "sizes": [39, 40, 41, 42, 43, 44],
     "main_image": "1303978-400-400",
     "hover_image": "1303979-400-400"
-}, {
+  },
+  {
     "product_id": "02b7792fd3",
     "vendor": "Adidas",
     "title": "Pantalones cortos",
@@ -104,13 +111,14 @@
     "discount_percent": 12,
     "installments_quantity": 3,
     "category": "indumentaria",
-    "product_type": "bolsos y mochilas",
+    "product_type": "parte inferior",
     "gender": "male",
     "quantity_in_stock": 70,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1176683-400-400",
     "hover_image": "1176684-400-400"
-}, {
+  },
+  {
     "product_id": "f16d4cb924",
     "vendor": "Puma",
     "title": "Campera impermeable",
@@ -123,10 +131,11 @@
     "product_type": "buzos y camperas",
     "gender": "unisex",
     "quantity_in_stock": 360,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["M", "L", "XL"],
     "main_image": "1209649-400-400",
     "hover_image": "1209650-400-400"
-}, {
+  },
+  {
     "product_id": "cc393a740b",
     "vendor": "Adidas",
     "title": "Remera",
@@ -136,13 +145,14 @@
     "discount_percent": 23,
     "installments_quantity": 1,
     "category": "indumentaria",
-    "product_type": "shorts",
+    "product_type": "conjuntos deportivos",
     "gender": "unisex",
     "quantity_in_stock": 978,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
     "main_image": "1225213-400-400",
     "hover_image": "1225214-400-400"
-}, {
+  },
+  {
     "product_id": "e377dabcbb",
     "vendor": "Adidas",
     "title": "Short mujer",
@@ -152,13 +162,14 @@
     "discount_percent": 15,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "medias",
+    "product_type": "parte inferior",
     "gender": "unisex",
     "quantity_in_stock": 927,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L"],
     "main_image": "1225238-400-400",
     "hover_image": "1225239-400-400"
-}, {
+  },
+  {
     "product_id": "0015eba6e3",
     "vendor": "Adidas",
     "title": "Calzas",
@@ -168,13 +179,14 @@
     "discount_percent": 30,
     "installments_quantity": 3,
     "category": "indumentaria",
-    "product_type": "conjuntos deportivos",
+    "product_type": "calzas",
     "gender": "female",
     "quantity_in_stock": 901,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L"],
     "main_image": "1227793-400-400",
     "hover_image": "1227794-400-400"
-}, {
+  },
+  {
     "product_id": "d124016d25",
     "vendor": "Puma",
     "title": "Pantalones corto hombre",
@@ -184,13 +196,14 @@
     "discount_percent": 12,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "camisetas",
+    "product_type": "parte inferior",
     "gender": "unisex",
     "quantity_in_stock": 173,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L"],
     "main_image": "1227817-400-400",
     "hover_image": "1227818-400-400"
-}, {
+  },
+  {
     "product_id": "46f13e3af6",
     "vendor": "Adidas",
     "title": "Calzas cortas",
@@ -200,13 +213,14 @@
     "discount_percent": 17,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "medias",
+    "product_type": "calzas",
     "gender": "female",
     "quantity_in_stock": 999,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L"],
     "main_image": "1231460-400-400",
     "hover_image": "1231461-400-400"
-}, {
+  },
+  {
     "product_id": "79e2def836",
     "vendor": "Reebok",
     "title": "Campera",
@@ -216,13 +230,14 @@
     "discount_percent": 22,
     "installments_quantity": 3,
     "category": "indumentaria",
-    "product_type": "botines",
+    "product_type": "buzos y camperas",
     "gender": "male",
     "quantity_in_stock": 348,
-    "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["M", "L", "XL"],
     "main_image": "1262490-400-400",
     "hover_image": "1262491-400-400"
-}, {
+  },
+  {
     "product_id": "e5a43c9eec",
     "vendor": "Nike",
     "title": "Remera",
@@ -232,13 +247,14 @@
     "discount_percent": 16,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "conjuntos deportivos",
+    "product_type": "parte superior",
     "gender": "male",
     "quantity_in_stock": 555,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1287400-400-400",
     "hover_image": "1287401-400-400"
-}, {
+  },
+  {
     "product_id": "d152fb3468",
     "vendor": "Reebok",
     "title": "Pantalón largo impermeable",
@@ -248,13 +264,14 @@
     "discount_percent": 14,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "conjuntos deportivos",
+    "product_type": "parte inferior",
     "gender": "male",
     "quantity_in_stock": 546,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1288597-400-400",
     "hover_image": "1288598-400-400"
-}, {
+  },
+  {
     "product_id": "4ee27e30f0",
     "vendor": "Nike",
     "title": "Pantalón corto hombre",
@@ -264,13 +281,14 @@
     "discount_percent": 17,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "traje de baño",
+    "product_type": "parte inferior",
     "gender": "male",
     "quantity_in_stock": 12,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1288750-400-400",
     "hover_image": "1288751-400-400"
-}, {
+  },
+  {
     "product_id": "09de0000ff",
     "vendor": "Under Armour",
     "title": "Remera hombre",
@@ -280,13 +298,14 @@
     "discount_percent": 22,
     "installments_quantity": 3,
     "category": "indumentaria",
-    "product_type": "parte inferior",
+    "product_type": "parte superior",
     "gender": "male",
     "quantity_in_stock": 304,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1315004-400-400",
     "hover_image": "1315005-400-400"
-}, {
+  },
+  {
     "product_id": "f89c0edd36",
     "vendor": "Under Armour",
     "title": "Calzas mujer",
@@ -296,13 +315,14 @@
     "discount_percent": 29,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "traje de baño",
+    "product_type": "calzas",
     "gender": "female",
     "quantity_in_stock": 927,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1332436-400-400",
     "hover_image": "1332437-400-400"
-}, {
+  },
+  {
     "product_id": "fa3c02b542",
     "vendor": "Under Armour",
     "title": "Calzas mujer",
@@ -312,13 +332,14 @@
     "discount_percent": 21,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "botines",
+    "product_type": "calzas",
     "gender": "female",
     "quantity_in_stock": 807,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1332526-400-400",
     "hover_image": "1332527-400-400"
-}, {
+  },
+  {
     "product_id": "719978030f",
     "vendor": "Reebok",
     "title": "Zapatillas negras",
@@ -328,13 +349,14 @@
     "discount_percent": 21,
     "installments_quantity": 9,
     "category": "calzado",
-    "product_type": "buzos y camperas",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 143,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1355768-400-400",
     "hover_image": "1355769-400-400"
-}, {
+  },
+  {
     "product_id": "c3920f92dd",
     "vendor": "Reebok",
     "title": "Zapatillas blancas - lineas negras",
@@ -344,13 +366,14 @@
     "discount_percent": 24,
     "installments_quantity": 3,
     "category": "calzado",
-    "product_type": "gorras",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 819,
     "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
     "main_image": "1361603-400-400",
     "hover_image": "1361604-400-400"
-}, {
+  },
+  {
     "product_id": "198bead7a8",
     "vendor": "Reebok",
     "title": "Zapatillas blancas",
@@ -360,13 +383,14 @@
     "discount_percent": 10,
     "installments_quantity": 12,
     "category": "calzado",
-    "product_type": "shorts",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 938,
     "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
     "main_image": "1368686-400-400",
     "hover_image": "1368687-400-400"
-}, {
+  },
+  {
     "product_id": "aecb087456",
     "vendor": "Reebok",
     "title": "Zapatillas negras - lineas blancas",
@@ -376,13 +400,14 @@
     "discount_percent": 26,
     "installments_quantity": 9,
     "category": "calzado",
-    "product_type": "medias",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 727,
     "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
     "main_image": "1370397-400-400",
     "hover_image": "1370398-400-400"
-}, {
+  },
+  {
     "product_id": "b1c07afebf",
     "vendor": "Reebok",
     "title": "Zapatillas gris y blanco",
@@ -392,13 +417,14 @@
     "discount_percent": 10,
     "installments_quantity": 3,
     "category": "calzado",
-    "product_type": "botines",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 985,
     "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
     "main_image": "1370408-400-400",
     "hover_image": "1370409-400-400"
-}, {
+  },
+  {
     "product_id": "5c49305ddb",
     "vendor": "Reebok",
     "title": "Zapatillas rosa y blanco",
@@ -408,13 +434,14 @@
     "discount_percent": 30,
     "installments_quantity": 9,
     "category": "calzado",
-    "product_type": "conjuntos deportivos",
+    "product_type": "calzado",
     "gender": "unisex",
     "quantity_in_stock": 183,
     "sizes": [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
     "main_image": "1370419-400-400",
     "hover_image": "1370420-400-400"
-}, {
+  },
+  {
     "product_id": "987b3082c0",
     "vendor": "Adidas",
     "title": "Remera Selección - Arquero",
@@ -424,13 +451,14 @@
     "discount_percent": 27,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "calzado",
+    "product_type": "parte superior",
     "gender": "male",
     "quantity_in_stock": 364,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379657-400-400",
     "hover_image": "1379658-400-400"
-}, {
+  },
+  {
     "product_id": "663ff3b1f2",
     "vendor": "Adidas",
     "title": "Pantalón Selección - Arquero",
@@ -440,13 +468,14 @@
     "discount_percent": 15,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "calzas",
+    "product_type": "parte inferior",
     "gender": "male",
     "quantity_in_stock": 175,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379666-400-400",
     "hover_image": "1379667-400-400"
-}, {
+  },
+  {
     "product_id": "6b42a7c585",
     "vendor": "Adidas",
     "title": "Remera Selección",
@@ -456,13 +485,14 @@
     "discount_percent": 30,
     "installments_quantity": 9,
     "category": "indumentaria",
-    "product_type": "buzos y camperas",
+    "product_type": "parte superior",
     "gender": "male",
     "quantity_in_stock": 212,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379687-400-400",
     "hover_image": "1379688-400-400"
-}, {
+  },
+  {
     "product_id": "4555cf81e8",
     "vendor": "Adidas",
     "title": "Pantalón Selección Corto",
@@ -472,13 +502,14 @@
     "discount_percent": 13,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "conjuntos deportivos",
+    "product_type": "parte inferior",
     "gender": "male",
     "quantity_in_stock": 331,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379674-400-400",
     "hover_image": "1379675-400-400"
-}, {
+  },
+  {
     "product_id": "fc0aa6b76c",
     "vendor": "Adidas",
     "title": "Pantalón Selección Largo",
@@ -494,7 +525,8 @@
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379681-400-400",
     "hover_image": "1379682-400-400"
-}, {
+  },
+  {
     "product_id": "29fd6a8e35",
     "vendor": "Adidas",
     "title": "Campera Selección",
@@ -504,11 +536,11 @@
     "discount_percent": 20,
     "installments_quantity": 6,
     "category": "indumentaria",
-    "product_type": "shorts",
+    "product_type": "buzos y camperas",
     "gender": "male",
     "quantity_in_stock": 447,
     "sizes": ["S", "M", "L", "XL"],
     "main_image": "1379689-400-400",
     "hover_image": "1379690-400-400"
-}
+  }
 ]
