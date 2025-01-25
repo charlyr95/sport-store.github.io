@@ -32,26 +32,6 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
-@media (min-width: 576px) {
-  .text-shadow-sm {
-    text-shadow: 2px 2px 5px #000000;
-  }
-}
-@media (min-width: 768px) {
-  .text-shadow-md {
-    text-shadow: 2px 2px 5px #000000;
-  }
-}
-@media (min-width: 992px) {
-  .text-shadow-lg {
-    text-shadow: 2px 2px 5px #000000;
-  }
-}
-@media (min-width: 1200px) {
-  .text-shadow-xl {
-    text-shadow: 2px 2px 5px #000000;
-  }
-}
 /* Fuente logo */
 .navbar-brand {
   font-family: "Kolker Brush", cursive;
@@ -151,12 +131,6 @@ html {
   transition-property: all !important; /* Override AOS */
   z-index: 1 !important;
 }
-
-.product-item:hover {
-  transform: scale(1.05);
-  z-index: 2 !important;
-}
-
 .product-item .buy-button {
   overflow: hidden;
   position: absolute;
@@ -166,48 +140,41 @@ html {
   height: 0;
   margin: 0;
   padding: 0;
-  border-left: 1px solid var(--bs-border-color);
-  border-right: 1px solid var(--bs-border-color);
-  border-top: 0;
-  border-bottom: 0;
+  border: 0 solid var(--bs-border-color);
+  border-left-width: 1px;
+  border-right-width: 1px;
   border-color: var(--bs-border-color-translucent);
   border-style: groove;
   transition: height 0.2s ease-in-out;
 }
-
-.product-item:hover .buy-button::before {
+.product-item .buy-button::before {
   transition: height 1.15s ease-in-out, opacity 0.5s ease !important;
 }
-
+.product-item:hover {
+  transform: scale(1.05);
+  z-index: 2 !important;
+}
 .product-item:hover .buy-button {
   border-bottom: 1px solid var(--bs-border-color);
   height: 3.5rem;
 }
 
 /* Card item */
-.card-image-container .hover-image {
-  opacity: 0 !important;
-}
-
-.card-image-container:hover .hover-image {
-  opacity: 1 !important;
-}
-
 .card-image-container {
   position: relative;
   overflow: hidden;
 }
-
+.card-image-container .hover-image {
+  opacity: 0 !important;
+}
+.card-image-container:hover .hover-image {
+  opacity: 1 !important;
+}
+.card-image-container:hover img.main-image, .card-image-container:hover img.hover-image {
+  transform: scale(1.1);
+}
 .card-image-container img {
   transition: transform 0.5s, opacity 0.15s ease-in-out !important;
-}
-
-.card-image-container:hover img.main-image {
-  transform: scale(1.1);
-}
-
-.card-image-container:hover img.hover-image {
-  transform: scale(1.1);
 }
 
 .card-body {

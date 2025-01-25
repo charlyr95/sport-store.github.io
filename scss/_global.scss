@@ -31,12 +31,12 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
-$sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 
-@each $size, $value in $sizes {
-  @media (min-width: $value) {
-    .text-shadow-#{$size} {
-      text-shadow: 2px 2px 5px #000000;
-    }
-  }
-}
+// @each $size, $value in $sizes {
+//   @media (min-width: $value) {
+//     .text-shadow-#{$size} {
+//       text-shadow: 2px 2px 5px #000000;
+//     }
+//   }
+// }
