@@ -32,6 +32,26 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
+@media (min-width: 576px) {
+  .text-shadow-sm {
+    text-shadow: 2px 2px 5px #000000;
+  }
+}
+@media (min-width: 768px) {
+  .text-shadow-md {
+    text-shadow: 2px 2px 5px #000000;
+  }
+}
+@media (min-width: 992px) {
+  .text-shadow-lg {
+    text-shadow: 2px 2px 5px #000000;
+  }
+}
+@media (min-width: 1200px) {
+  .text-shadow-xl {
+    text-shadow: 2px 2px 5px #000000;
+  }
+}
 /* Fuente logo */
 .navbar-brand {
   font-family: "Kolker Brush", cursive;
