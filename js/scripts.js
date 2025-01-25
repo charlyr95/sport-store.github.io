@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         cargarProductos();
     }
 
-    // try {
-    //   AOS.init();
-    // } catch (error) {
-    //   console.error("Error al cargar AOS:", error);
-    // }
+    try {
+      AOS.init();
+    } catch (error) {
+      console.error("Error al cargar AOS:", error);
+    }
 });
 
 
