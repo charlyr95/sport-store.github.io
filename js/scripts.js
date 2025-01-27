@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cargarProductos();
   } else if (path.includes("index.html")) {
     cargarTopProductos();
-    initSwiper();
+    // initSwiper();
   }
 
   try {
@@ -172,7 +172,7 @@ function cargarTopProductos() {
 
       // Insertar el contenido en el contenedor
       container.innerHTML = `${sliderContent}`;
-
+      initSwiper();
       // Aquí puedes inicializar un carrusel si usas una librería como Swiper o Slick
     })
     .catch((error) => console.error("Error al cargar el JSON:", error));
