@@ -54,7 +54,8 @@ html {
 }
 
 .h-wider{
-  max-height: calc(100vw / 2.3);
+  min-height: 240px;
+  max-height: calc(100vw / 2.51);
 }
 
 // $sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);

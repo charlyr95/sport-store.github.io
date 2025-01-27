@@ -51,7 +51,8 @@ html {
 }
 
 .h-wider {
-  max-height: 43.4782608696vw;
+  min-height: 240px;
+  max-height: 39.8406374502vw;
 }
 
 /* Fuente logo */
