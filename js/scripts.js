@@ -21,12 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initSwiper() {
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: 2,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    grid: {
+      rows: 1,
+    },
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -46,11 +51,27 @@ function initSwiper() {
       },
       1200: {
         slidesPerView: 5,
-        spaceBetween: 30,
+        spaceBetween: 10,
       },
       1400: {
         slidesPerView: 6,
-        spaceBetween: 50,
+        spaceBetween: 20,
+      },
+      1600: {
+        slidesPerView: 7,
+        spaceBetween: 30,
+      },
+      1920: {
+        slidesPerView: 8,
+        spaceBetween: 30,
+      },
+      2560: {
+        slidesPerView: 9,
+        spaceBetween: 30,
+      },
+      3440: {
+        slidesPerView: 10,
+        spaceBetween: 30,
       },
     },
   });
