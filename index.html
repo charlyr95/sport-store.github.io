@@ -21,9 +21,11 @@
   <meta name="theme-color" content="#712cf9" />
   
   <!-- Estilos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" >
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="./css/styles.css">
@@ -98,7 +100,7 @@
   </div>
 
   <!-- Encabezado -->
-  <header class="transparent-header">
+  <header class="transparent-header ">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom border-secondary border-opacity-50">
       <div class="container-fluid align-items-center">
@@ -129,7 +131,8 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Tienda
               </a>
-              <ul class="dropdown-menu">
+              <!-- TODO: Copiar font size a los header de las otras páginas o colocarlo en el styles -->
+              <ul class="dropdown-menu" style="font-size: 0.9rem;">
                 <li><a class="dropdown-item" href="./pages/tienda.html">Explorar</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -171,70 +174,82 @@
     <div class="video-container position-relative">
       <img src="./assets/media/intro-1_thumbnail.jpg" class="position-absolute z-0" alt="" srcset="" style="object-fit: cover; height: 100%; width: 100%;">
       <video class="w-100 z-1" src="./assets/media/intro-1.mp4" autoplay muted playsinline loop></video>
-      <div class="overlay-text z-2">
+      <div class="overlay-text z-2 animate__animated animate__fadeInLeft">
         <h2 class="slogan-text fs-1">El movimiento nos une</h2>
       </div>
     </div>
 
     <!-- Banner promociones -->
-    <div class="container-fluid py-2 overflow-hidden">
-      <div class="d-flex align-items-center" id="moving-banner">
-        <div class="d-flex moving-banner align-items-center flex-nowrap">
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-cart me-2"></i>
-            <span>Ofertas especiales disponibles!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-credit-card me-2"></i>
-            <span>9 Cuotas sin interés!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-truck me-2"></i>
-            <span>Envío gratis a partir de $120.000!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-gift me-2"></i>
-            <span>15% de descuento con efectivo y transferencias!</span>
-          </div>
+    <div class="sticky-top top-0 z-2">
+      <!-- Espacio overlap fixed header con sticky banner -->
+      <div class="bg-dark text-light" style="line-height: 0; border-bottom: 1px solid var(--bs-border-color);">
+        <div class="pt-4 pb-4 text-center">
+          <!-- <span class="font-brand text-shadow-sm me-2 d-none d-sm-inline"style="font-size: 2.5rem !important;">Kineti<span class="text-warning">X Sports</span> </span>  -->
+          <span class="mb-3 mb-lg-0 fs-5 text-uppercase text-shadow-lg ">tu tienda de deporte online</span>
         </div>
-        <div class="d-flex moving-banner align-items-center flex-nowrap">
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-cart me-2"></i>
-            <span>Ofertas especiales disponibles!</span>
+        <div class="pt-1"></div>
+      </div>
+      <!-- Banner -->
+      <div class="container-fluid py-2 overflow-hidden bg-body" style="border-bottom: 1px solid var(--bs-border-color);">
+        <div class="d-flex align-items-center" id="moving-banner">
+          <div class="d-flex moving-banner align-items-center flex-nowrap">
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-cart me-2"></i>
+              <span>Ofertas especiales disponibles!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-credit-card me-2"></i>
+              <span>9 Cuotas sin interés!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-truck me-2"></i>
+              <span>Envío gratis a partir de $120.000!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-gift me-2"></i>
+              <span>15% de descuento con efectivo y transferencias!</span>
+            </div>
           </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-credit-card me-2"></i>
-            <span>9 Cuotas sin interés!</span>
+          <div class="d-flex moving-banner align-items-center flex-nowrap">
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-cart me-2"></i>
+              <span>Ofertas especiales disponibles!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-credit-card me-2"></i>
+              <span>9 Cuotas sin interés!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-truck me-2"></i>
+              <span>Envío gratis a partir de $120.000!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-gift me-2"></i>
+              <span>15% de descuento con efectivo y transferencias!</span>
+            </div>
           </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-truck me-2"></i>
-            <span>Envío gratis a partir de $120.000!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-gift me-2"></i>
-            <span>15% de descuento con efectivo y transferencias!</span>
-          </div>
-        </div>
-        <div class="d-flex moving-banner align-items-center flex-nowrap">
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-cart me-2"></i>
-            <span>Ofertas especiales disponibles!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-credit-card me-2"></i>
-            <span>9 Cuotas sin interés!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-truck me-2"></i>
-            <span>Envío gratis a partir de $120.000!</span>
-          </div>
-          <div class="d-flex flex-nowrap me-5">
-            <i class="bi bi-gift me-2"></i>
-            <span>15% de descuento con efectivo y transferencias!</span>
+          <div class="d-flex moving-banner align-items-center flex-nowrap">
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-cart me-2"></i>
+              <span>Ofertas especiales disponibles!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-credit-card me-2"></i>
+              <span>9 Cuotas sin interés!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-truck me-2"></i>
+              <span>Envío gratis a partir de $120.000!</span>
+            </div>
+            <div class="d-flex flex-nowrap me-5">
+              <i class="bi bi-gift me-2"></i>
+              <span>15% de descuento con efectivo y transferencias!</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Carousel -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-indicators">
@@ -272,45 +287,190 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!-- Titulo tienda -->
-    <div class="container-fluid text-center mb-3 bg-body-tertiary shadow">
-      <h3 class="fw-light d-flex justify-content-center align-items-center text-nowrap flex-column flex-lg-row gap-lg-3">
-        <span class="font-brand text-shadow-sm me-2 "style="font-size: 4rem !important;">Kineti<span class="text-warning">X Sports</span> </span> 
-        <span class="mb-3 mb-lg-0">tu tienda de deporte online</span>
-      </h3>
-    </div>
-    <!-- Productos destacados -->
-    <div class="container mb-5">
-      <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center">
-        <div class="card text-bg-dark shadow">
-          <img src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_1_ok.jpg" class="card-img" alt="">
-          <div class="card-img-overlay text-center ">
-            <div class="d-flex flex-column justify-content-end align-items-center h-100">
-              <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Descubrí lo mejor para acompañarte en cada paso</p>
-              <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Calzados</a>
+ 
+    <!-- Mailing -->
+    <section class=" py-3 bg-warning text-center container-fluid d-flex justify-content-center align-content-center text-dark flex-column gap-0 " style="font-size: 0.8rem !important;">
+      <h3 class="text-uppercase ">Unite al mailing list</h3>
+      <p class="">¡Enterate de todas las novedades y promociones!</p>
+      <div class="container col-12  col-md-4 input-group mb-3">
+        <input type="text " class="form-control bg-white text-black border border-opacity-25 border-1 border-end-0 border-dark " placeholder="Dirección e-mail" aria-label="Dirección e-mail" >
+        <button class="btn btn-outline-dark" type="button" id="button-mailing">Suscribirse</button>
+      </div>
+    </section>
+
+    <!-- Novedades -->
+    <section class="container-fluid bg-body">
+      <h3 class="text-center py-3 text-uppercase ">Novedades</h3>
+      <div class="container pb-5">
+        <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center">
+          <div class="card text-bg-dark shadow">
+            <img
+              src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_1_ok.jpg"
+              class="card-img" alt="">
+            <div class="card-img-overlay text-center ">
+              <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Descubrí lo mejor para acompañarte
+                  en cada paso</p>
+                <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Calzados</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card text-bg-dark shadow">
-          <img src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_2_ok.jpg" class="card-img" alt="">
-          <div class="card-img-overlay text-center ">
-            <div class="d-flex flex-column justify-content-end align-items-center h-100">
-              <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">La ropa de mejor calidad a un solo click de distancia.</p>
-              <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Indumentaria</a>
+          <div class="card text-bg-dark shadow">
+            <img
+              src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_2_ok.jpg"
+              class="card-img" alt="">
+            <div class="card-img-overlay text-center ">
+              <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">La ropa de mejor calidad a un solo
+                  click de distancia.</p>
+                <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Indumentaria</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card text-bg-dark shadow">
-          <img src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg" class="card-img" alt="">
-          <div class="card-img-overlay text-center ">
-            <div class="d-flex flex-column justify-content-end align-items-center h-100">
-              <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
-              <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+          <div class="card text-bg-dark shadow">
+            <img
+              src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+              class="card-img" alt="">
+            <div class="card-img-overlay text-center ">
+              <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="bg-dark-subtle pb-4">
+      <h3 class="container-fluid text-center py-3 text-uppercase ">Productos destacados</h3>
+      <div class=" mx-2 d-flex">
+        <div class="swiper mySwiper" style="--swiper-navigation-color: #fff">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img src="./assets/images/Home_es_Desktop_montaña_1_ok.webp" class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Descubrí lo mejor para acompañarte en cada paso</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Calzados</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="./assets/images/Home_es_Desktop_montaña_2_ok.webp"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">La ropa de mejor calidad a un solo click de distancia.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Indumentaria</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="./assets/images/Home_es_Desktop_montaña_3_ok.webp"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card text-bg-dark shadow">
+                <img
+                  src="https://media.atmosferasport.es/img/cms/landing/HOME/Deportes/ES/Home_es_Desktop_monta%C3%B1a_3_ok.jpg"
+                  class="card-img" alt="">
+                <div class="card-img-overlay text-center ">
+                  <div class="d-flex flex-column justify-content-end align-items-center h-100">
+                    <p class="p-2 rounded-2 card-text text-shadow-sm bg-black bg-opacity-25">Combinalo como quieras.</p>
+                    <a class="btn btn-outline-warning shadow-sm" role="button" href="./pages/tienda.html">Accesorios</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -330,8 +490,10 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
   <script src="./js/scripts.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

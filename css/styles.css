@@ -11,12 +11,30 @@ footer {
 }
 
 /* Scroll */
-::-webkit-scrollbar {
-  width: 5px;
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(111, 111, 111) rgba(0, 0, 0, 0);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: 3px solid rgb(0, 64, 255);
 }
 
 html {
-  overflow-y: visible !important;
+  scrollbar-width: thin;
+  scroll-behavior: smooth !important;
 }
 
 /* Sombras textos */

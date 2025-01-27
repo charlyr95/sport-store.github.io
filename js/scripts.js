@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (path.includes("tienda.html")) {
         actualizarBreadcrumb();
         cargarProductos();
+    } else if (path.includes("index.html")) {
+        initSwiper();
     }
 
     try {
@@ -16,6 +18,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+function initSwiper() {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1400: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  });
+};
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
 
 function actualizarBreadcrumb() {
     const urlParams = new URLSearchParams(window.location.search);
