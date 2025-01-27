@@ -53,6 +53,10 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
+.h-wider{
+  max-height: calc(100vw / 2.3);
+}
+
 // $sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 
 // @each $size, $value in $sizes {

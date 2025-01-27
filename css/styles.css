@@ -50,6 +50,10 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
+.h-wider {
+  max-height: 43.4782608696vw;
+}
+
 /* Fuente logo */
 .navbar-brand {
   font-family: "Kolker Brush", cursive;
@@ -117,7 +121,6 @@ html {
 
 /* Imagenes carousel index */
 #hero-carousel img {
-  height: 720px;
   object-fit: cover;
   filter: brightness(0.8);
   transition: all 0.3s ease-in-out;
@@ -143,6 +146,10 @@ html {
     transform: translateX(-100%);
   }
 }
+header .dropdown-menu {
+  font-size: 0.9rem !important;
+}
+
 /* Producto */
 .product-item {
   transition: all 0.3s ease-out, border 0s;
