@@ -133,7 +133,7 @@ function cargarTopProductos() {
         .map(
           (product) => `
            <div class="swiper-slide pb-5">
-           <div class="col product-item z-1 pb-5" data-aos="flip-right">
+           <div class="col product-item z-1 pb-5">
               <div class="product-card-container h-100">
                <div class="h-100 position-relative p-0">
                 <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
