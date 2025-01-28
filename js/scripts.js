@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
+console.log("Cargando scripts...")
 
   // Lógica para cada página
   if (path.includes("producto.html")) {
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarBreadcrumb();
     cargarProductos();
   } else if (path.includes("index.html")) {
-    cargarTopProductos();
+    // cargarTopProductos();
     // initSwiper();
   }
 
@@ -21,21 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initSwiper() {
-  var swiper = new Swiper(".mySwiper", {
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
     slidesPerView: 2,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    grid: {
-      rows: 1,
-    },
-    spaceBetween: 30,
-    grabCursor: true,
+    spaceBetween: 10,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
     },
     breakpoints: {
       576: {
@@ -76,7 +73,7 @@ function initSwiper() {
       },
     },
   });
-}
+};
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -107,7 +104,7 @@ function actualizarBreadcrumb() {
   } else {
     breadcrumbCategory.remove(); // Elimina el último ítem si no hay categoría
   }
-}
+};
 
 // Utilizado para simular el backend y base de datos
 function cargarTopProductos() {
@@ -132,10 +129,10 @@ function cargarTopProductos() {
       const sliderContent = topProducts
         .map(
           (product) => `
-           <div class="swiper-slide pb-5">
-           <div class="col product-item z-1 pb-5">
-              <div class="product-card-container h-100">
-               <div class="h-100 position-relative p-0">
+        <div class="swiper-slide">
+          <div class="product-item z-1 pb-5">
+            <div class="product-card-container h-100">
+              <div class="h-100 position-relative p-0">
                 <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
                   <div class="product-img border-bottom bg-white">
                     <div class="card-image-container position-relative overflow-hidden">
@@ -152,20 +149,18 @@ function cargarTopProductos() {
                       <li><span class="text-dark-emphasis fw-bold">$${( Math.round(product.price * 0.0085) * 100 ).toLocaleString( "es-AR" )}</span> <small class="text-muted">con Transferencia</small></li>
                     </ul>
                   </div>
-                  </div>
-                  <div class="m-0 p-0 z-2">
-                    <div class="buy-button bg-body-tertiary top-0 z-2">
-                      <div class="p-4 pt-1 z-2">
-                        <a href="./pages/producto.html?id=${ product.product_id }" class="btn btn-warning w-100 z-5" role="button">
-                          Ver producto
-                        </a>
-                      </div>
+                </div>
+                <div class="m-0 p-0 z-2">
+                  <div class="buy-button bg-body-tertiary top-0 z-2">
+                    <div class="p-4 pt-1 z-2">
+                      <a href="./pages/producto.html?id=${ product.product_id }" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
                     </div>
                   </div>
-                  </div>
+                </div>
               </div>
             </div>
-            </div>
+          </div>
+        </div>
         `
         )
         .join("");
