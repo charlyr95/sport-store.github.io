@@ -104,3 +104,8 @@ $banner-animation-duration: 20s;
   min-height: 240px;
   max-height: calc(100vw / 2.51);
 }
+
+.swiper-slide{
+  max-height: 50%;
+  max-width: fit-content !important;
+}

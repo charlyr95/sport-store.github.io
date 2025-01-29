@@ -142,6 +142,11 @@ header .dropdown-menu {
   max-height: 39.8406374502vw;
 }
 
+.swiper-slide {
+  max-height: 50%;
+  max-width: fit-content !important;
+}
+
 /* Producto */
 .product-item {
   transition: all 0.3s ease-out, border 0s;
