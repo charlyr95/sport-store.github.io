@@ -1,3 +1,8 @@
+$scrollbar-color-primary: rgb(111, 111, 111);
+$scrollbar-color-background: rgba(0, 0, 0, 0);
+$shadow-color-primary: #000000;
+
+
 /* Reset básico */
 * {
   margin: 0;
@@ -10,52 +15,43 @@ footer {
 }
 
 /* Scroll */
-
-/* Works on Firefox */
+/* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(111, 111, 111) rgba(0, 0, 0, 0);
+  scrollbar-color: $scrollbar-color-primary $scrollbar-color-background;
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+  background: $scrollbar-color-primary;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(111, 111, 111);
+  background-color: $scrollbar-color-background;
   border-radius: 10px;
   border: none;
 }
+
 html {
   scrollbar-width: thin;
   scroll-behavior: smooth !important;
 }
 
-html {
-  // overflow-y: visible !important;
-}
-
 /* Sombras textos */
 .text-shadow-sm {
-  text-shadow: 1px 1px 3px #000000;
+  text-shadow: 1px 1px 3px $shadow-color-primary;
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 5px #000000;
+  text-shadow: 2px 2px 5px $shadow-color-primary;
 }
 
 .text-shadow-lg {
-  text-shadow: 5px 5px 10px #000000;
-}
-
-.h-wider{
-  min-height: 240px;
-  max-height: calc(100vw / 2.51);
+  text-shadow: 5px 5px 10px $shadow-color-primary;
 }
 
 // $sizes: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);

@@ -11,23 +11,23 @@ footer {
 }
 
 /* Scroll */
-/* Works on Firefox */
+/* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(111, 111, 111) rgba(0, 0, 0, 0);
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+  background: rgb(111, 111, 111);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(111, 111, 111);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
   border: none;
 }
@@ -50,24 +50,21 @@ html {
   text-shadow: 5px 5px 10px #000000;
 }
 
-.h-wider {
-  min-height: 240px;
-  max-height: 39.8406374502vw;
+header .dropdown-menu {
+  font-size: 0.9rem !important;
 }
 
-/* Fuente logo */
 .navbar-brand {
-  font-family: "Kolker Brush", cursive;
+  font-family: "Kolker Brush";
   font-size: 40px;
   line-height: 0.5;
   height: 100%;
 }
 
 .font-brand {
-  font-family: "Kolker Brush", cursive;
+  font-family: "Kolker Brush";
 }
 
-/* Video */
 .video-container {
   height: 100vh;
   display: flex;
@@ -82,7 +79,6 @@ html {
   object-fit: cover;
 }
 
-/* Slogan */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -94,18 +90,16 @@ html {
   z-index: 1;
   user-select: none;
 }
-
 .overlay-text .slogan-text {
   font-family: "Sulphur Point", sans-serif;
   font-weight: 100;
   text-shadow: 2px 2px 5px #000000, 5px 5px 10px #000000, 2px 2px 20px #000000;
   text-transform: uppercase;
+  transition: all 0.5s ease;
 }
-
 .overlay-text .slogan-text:hover {
   color: orange;
 }
-
 .overlay-text .slogan-text::after {
   content: "";
   display: block;
@@ -113,25 +107,21 @@ html {
   height: 2px;
   background-color: orange;
   box-shadow: 0px 0px 7px #000;
-  transition: all 0.5s ease;
+  transition: width 0.5s ease;
 }
-
 .overlay-text:hover .slogan-text::after {
   width: 100%;
 }
 
-/* Imagenes carousel index */
 #hero-carousel img {
   object-fit: cover;
   filter: brightness(0.8);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease;
 }
-
 #hero-carousel img:hover {
   filter: brightness(1);
 }
 
-/* Banner ofertas */
 .moving-banner {
   flex-shrink: 0;
   animation: scrollBanner infinite linear;
@@ -147,8 +137,9 @@ html {
     transform: translateX(-100%);
   }
 }
-header .dropdown-menu {
-  font-size: 0.9rem !important;
+.h-wider {
+  min-height: 240px;
+  max-height: 39.8406374502vw;
 }
 
 /* Producto */

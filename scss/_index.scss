@@ -1,0 +1,106 @@
+// Variables
+$primary-color: white;
+$hover-color: orange;
+$video-height: 100vh;
+$text-shadow-lg: 2px 2px 5px #000000, 5px 5px 10px #000000, 2px 2px 20px #000000;
+$carousel-brightness: 0.8;
+$carousel-transition: 0.3s ease-in-out;
+$banner-animation-duration: 20s;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absolute-center($top: 50%, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translateY(-50%);
+}
+
+@mixin transition($props: all, $time: 0.5s, $ease: ease) {
+  transition: $props $time $ease;
+}
+
+// Estilos
+.video-container {
+  height: $video-height;
+  @include flex-center;
+  overflow: hidden;
+}
+
+.video-container video {
+  height: $video-height;
+  width: auto;
+  object-fit: cover;
+}
+
+.overlay-text {
+  @include absolute-center;
+  padding: 0 20px;
+  color: $primary-color;
+  text-align: left;
+  z-index: 1;
+  user-select: none;
+
+  .slogan-text {
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 100;
+    text-shadow: $text-shadow-lg;
+    text-transform: uppercase;
+    @include transition;
+
+    &:hover {
+      color: $hover-color;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: $hover-color;
+      box-shadow: 0px 0px 7px #000;
+      @include transition(width, 0.5s, ease);
+    }
+  }
+
+  &:hover .slogan-text::after {
+    width: 100%;
+  }
+}
+
+#hero-carousel img {
+  object-fit: cover;
+  filter: brightness($carousel-brightness);
+  @include transition;
+
+  &:hover {
+    filter: brightness(1);
+  }
+}
+
+.moving-banner {
+  flex-shrink: 0;
+  animation: scrollBanner infinite linear;
+  animation-duration: $banner-animation-duration;
+  white-space: nowrap;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.h-wider{
+  min-height: 240px;
+  max-height: calc(100vw / 2.51);
+}

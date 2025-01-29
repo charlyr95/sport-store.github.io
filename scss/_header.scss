@@ -1,3 +1,29 @@
+// Variables
+$font-brand: "Kolker Brush";
+$font-size-brand: 40px;
+$dropdown-font-size: 0.9rem;
+
+// Mixins
+@mixin font-brand {
+  font-family: $font-brand;
+}
+
+@mixin dropdown-style {
+  font-size: $dropdown-font-size !important;
+}
+
+// Estilos
 header .dropdown-menu {
-    font-size: 0.9rem !important;
+  @include dropdown-style;
+}
+
+.navbar-brand {
+  @include font-brand;
+  font-size: $font-size-brand;
+  line-height: 0.5;
+  height: 100%;
+}
+
+.font-brand {
+  @include font-brand;
 }
