@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="es" class="h-100" data-bs-theme="auto">
 
 <head>
-  <script src="../js/color-modes.js"></script>
+  <script src="../js/color-modes.js" defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Carlos Romero" />
@@ -16,7 +16,7 @@
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" />
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="../assets/icons/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
@@ -39,7 +39,7 @@
   <!-- Botón cambio de tema -->
   <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle z-3">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      aria-expanded="false" data-bs-toggle="dropdown" aria-live="polite" aria-label="Alternar tema">
       <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
         <use href="../assets/icons/symbols.svg#circle-half"></use>
       </svg>
@@ -47,8 +47,8 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema claro">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="../assets/icons/symbols.svg#sun-fill"></use>
           </svg>
@@ -59,8 +59,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema oscuro">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="../assets/icons/symbols.svg#moon-stars-fill"></use>
           </svg>
@@ -71,8 +71,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" role="menuitemradio"
+          aria-pressed="true" aria-label="Cambiar a tema automático">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="../assets/icons/symbols.svg#circle-half"></use>
           </svg>
@@ -86,19 +86,19 @@
   </div>
 
   <!-- Redes sociales -->
-  <div class="d-none d-md-block position-fixed top-50 end-0 mx-2 translate-middle-y z-3 ">
+  <div class="d-none d-md-block position-fixed top-50 end-0 mx-2 translate-middle-y z-3 " role="navigation" aria-label="Redes sociales">
     <div class="d-flex flex-column align-items-center bg-dark-subtle bg-opacity-75 py-2 px-2 rounded-pill">
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-facebook fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Facebook">
+        <i class="bi bi-facebook fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-tiktok fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="TikTok">
+        <i class="bi bi-tiktok fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-instagram fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Instagram">
+        <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis">
-        <i class="bi bi-whatsapp fs-4"></i>
+      <a href="#" class="link-body-emphasis" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
       </a>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="es" class="h-100" data-bs-theme="auto">
 
 <head>
   <script src="./js/color-modes.js" defer></script>
@@ -10,7 +10,7 @@
   <!-- Metas -->
   <title>KinetiX Sports - Ropa y Accesorios Deportivos en Argentina</title>
   <meta name="description" content="KinetiX Sports ofrece ropa y accesorios deportivos en Argentina. Descubre nuestra colección de alta calidad para running, fitness y más..." />
-  <meta name="keywords" content="kinetix sports, kinetix, sports, ropa deportiva, accesorios deportivos, fitness, running, Argentina, compra online, zapatillas deportivas" />
+  <meta name="keywords" content="kinetix sports, kinetix, deportes, zapatillas, accesorios, indumentaria, adidas, boca, river, pelotas, bolsos, mochilas, paletas, raquetas, raqueteros, futbol, indumentaria, accesorios, calzado, sandalias, paleteros, handball, patines, rollers, panchas, botines, ojotas, suecos, voley, botas, accesorioas, basketball, billeteras, riñoneras, botineros, football, rollers, patines, tablas, gorras, gorros, rugby, carteras, balones, fútbol, independiente, estudiantes, básquetball, indumetaria, ferrari, fitness, tennis, racing, futbol, roller, speedo, pelota, paleta, hockey, ducati, topper, reebok, wilson, pumas, rugby, patín, padel, voley, skate, palos, river, messi, sport, vairo, shoes, crocs, kappa, yoga, golf, puma, nike, head, reef, fila, vans, pony, nba, envio gratis, cuotas, Argentina" />
   <meta name="google-site-verification" content="OaOG8fHjMDJMyL3EkoqWWrRM0U5l10YMcFVVLq3WRCw" />
 
   <!-- Fuentes -->
@@ -39,7 +39,7 @@
   <!-- Botón cambio de tema -->
   <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle z-3">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      aria-expanded="false" data-bs-toggle="dropdown" aria-live="polite" aria-label="Alternar tema">
       <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
         <use href="./assets/icons/symbols.svg#circle-half"></use>
       </svg>
@@ -47,8 +47,8 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema claro">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="./assets/icons/symbols.svg#sun-fill"></use>
           </svg>
@@ -59,8 +59,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema oscuro">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="./assets/icons/symbols.svg#moon-stars-fill"></use>
           </svg>
@@ -71,8 +71,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" role="menuitemradio"
+          aria-pressed="true" aria-label="Cambiar a tema automático">
           <svg class="bi me-2 opacity-50" width="1em" height="1em">
             <use href="./assets/icons/symbols.svg#circle-half"></use>
           </svg>
@@ -86,23 +86,23 @@
   </div>
 
   <!-- Redes sociales -->
-  <div class="d-none d-md-block position-fixed top-50 end-0 mx-2 translate-middle-y z-3 ">
+  <div class="d-none d-md-block position-fixed top-50 end-0 mx-2 translate-middle-y z-3 " role="navigation" aria-label="Redes sociales">
     <div class="d-flex flex-column align-items-center bg-dark-subtle bg-opacity-75 py-2 px-2 rounded-pill">
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-facebook fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Facebook">
+        <i class="bi bi-facebook fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-tiktok fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="TikTok">
+        <i class="bi bi-tiktok fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis mb-2">
-        <i class="bi bi-instagram fs-4"></i>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Instagram">
+        <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
       </a>
-      <a href="#" target="_blank" class="link-body-emphasis">
-        <i class="bi bi-whatsapp fs-4"></i>
+      <a href="#" class="link-body-emphasis" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
       </a>
     </div>
   </div>
-
+  
   <!-- Encabezado -->
   <header class="transparent-header ">
     <!-- Fixed navbar -->
