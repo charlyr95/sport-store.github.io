@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
-console.log("Cargando scripts...")
+  // console.log("Cargando scripts...")
 
   // Lógica para cada página
   if (path.includes("producto.html")) {
