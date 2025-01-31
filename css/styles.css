@@ -65,6 +65,16 @@ header .dropdown-menu {
   font-family: "Kolker Brush";
 }
 
+:root, [data-bs-theme=light] {
+  --bs-info: #0d6ff0;
+  --bs-info-rgb: 5, 103, 220;
+}
+
+[data-bs-theme=dark] {
+  --bs-info: #0dcaf0;
+  --bs-info-rgb: 13, 202, 240;
+}
+
 .video-container {
   height: 100vh;
   display: flex;
