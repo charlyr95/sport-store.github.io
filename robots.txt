@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://kinetix-sports.pages.dev/sitemap.xml
