@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://charlyr95.github.io/sport-store.github.io/sitemap.xml
