@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // console.log("Cargando scripts...")
 
   // Lógica para cada página
-  if (path.includes("producto.html")) {
+  if (path.includes("/pages/producto")) {
     cargarDetalleProducto();
-  } else if (path.includes("tienda.html")) {
+  } else if (path.includes("/pages/tienda")) {
     actualizarBreadcrumb();
     cargarProductos();
   } else if (path.includes("index.html")) {
