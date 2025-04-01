@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100" data-bs-theme="auto">
+
+<head>
+  <script src="../js/color-modes.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Carlos Romero" />
+  
+  <!-- Metas -->
+  <title>KinetiX Sports - Tu tienda deportiva</title>
+  <meta name="description" content="KinetiX Sports la mejor calidad en nuestros productos y marcas deportivas..." />
+  <meta name="keywords" content="kinetix sports, kinetix, sports, ropa deportiva, accesorios deportivos, fitness, running, Argentina, compra online, zapatillas deportivas" />
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="google-site-verification" content="OaOG8fHjMDJMyL3EkoqWWrRM0U5l10YMcFVVLq3WRCw" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  
+  <!-- Favicons --> 
+  <link rel="shortcut icon" href="../assets/icons/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/icons/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../assets/icons/favicon-32x32.ico" >
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="../assets/icons/favicon-16x16.ico" >
+  <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" >
+  <meta name="theme-color" content="#444444" />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <style>
+    /* Estilos específicos para el carrito */
+    .cart-item {
+      transition: all 0.3s ease;
+    }
+    
+    .cart-item:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .cart-item-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      background-color: white;
+    }
+    
+    .quantity-selector {
+      max-width: 120px;
+    }
+    
+    .cart-summary {
+      position: sticky;
+      top: 100px;
+    }
+    
+    .remove-item {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    
+    .remove-item:hover {
+      color: #dc3545;
+    }
+    
+    .cart-empty {
+      min-height: 400px;
+    }
+    
+    .cart-empty-icon {
+      font-size: 5rem;
+      opacity: 0.5;
+    }
+    
+    .payment-method-card {
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+    
+    .payment-method-card:hover, .payment-method-card.active {
+      border-color: var(--bs-warning);
+      background-color: rgba(255, 193, 7, 0.1);
+    }
+    
+    .payment-method-card.active {
+      box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    }
+    
+    .coupon-input {
+      max-width: 250px;
+    }
+    
+    @media (max-width: 767.98px) {
+      .cart-item-img {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .cart-summary {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Botón cambio de tema -->
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle z-3">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-live="polite" aria-label="Alternar tema">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="../assets/icons/symbols.svg#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema claro">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" role="menuitemradio"
+          aria-pressed="false" aria-label="Cambiar a tema oscuro">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" role="menuitemradio"
+          aria-pressed="true" aria-label="Cambiar a tema automático">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="../assets/icons/symbols.svg#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Redes sociales -->
+  <div class="d-none d-md-block position-fixed top-50 end-0 mx-2 translate-middle-y z-3 " role="navigation" aria-label="Redes sociales">
+    <div class="d-flex flex-column align-items-center bg-dark-subtle bg-opacity-75 py-2 px-2 rounded-pill">
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Facebook">
+        <i class="bi bi-facebook fs-4" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="TikTok">
+        <i class="bi bi-tiktok fs-4" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="link-body-emphasis mb-2" aria-label="Instagram">
+        <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="link-body-emphasis" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="transparent-header" role="banner">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom border-secondary border-opacity-50" role="navigation" aria-label="Menú principal">
+      <div class="container-fluid align-items-center">
+        <!-- Logo navbar -->
+        <a class="navbar-brand mx-md-5 mx-2 text-shadow-sm" href="../index.html">Kineti<span class="text-warning">X
+            Sports</span></a>
+        <!-- Botón navbar -->
+        <div class="order-lg-last d-flex gap-2 flex-nowrap ms-lg-3">
+          <button class="btn btn-outline-light" type="button" aria-label="Cuenta de usuario">
+            <i class="bi bi-person"></i>
+          </button>
+          <button id="shoppingCartBtn" class="btn btn-outline-light" type="button" aria-label="Carrito de compras">
+            <i class="bi bi-cart2"></i>
+          </button>
+          <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Abrir menú de navegación">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <!-- Contenido navbar -->
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="font-size: 0.9em;">
+          <ul class="navbar-nav ms-xl-auto me-auto me-xl-auto mb-2 mb-lg-0 d-flex gap-xl-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown" data-bs-theme="dark">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tienda
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownTienda" role="menu">
+                <li><a class="dropdown-item" href="./tienda.html">Explorar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./tienda.html?gender=male">Hombre</a></li>
+                <li><a class="dropdown-item" href="./tienda.html?gender=female">Mujer</a></li>
+                <li><a class="dropdown-item" href="./tienda.html?age=kid">Niño</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./tienda.html?show=deport">Disciplinas</a></li>
+                <li><a class="dropdown-item" href="./tienda.html?show=brand">Marcas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./comunidad.html">Comunidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <div class="d-lg-none position-absolute w-100 start-0 bg-transparent" style="top: 100%; height: 100vh;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"></div>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+            <button class="btn btn-outline-light me-2" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Comienza el contenido de la página -->
+  <main class="flex-shrink-0 mt-5 overflow-hidden">
+    
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb" class="">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="./tienda.html">Tienda</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Carrito de compras</li>
+        </ol>
+      </nav>    
+    </div>
+
+    <div class="container mb-5">
+      <h1 class="mb-4">Tu carrito de compras</h1>
+      
+      <!-- Contenido del carrito (con productos) -->
+      <div id="cart-with-items">
+        <div class="row g-4">
+          <!-- Lista de productos en el carrito -->
+          <div class="col-12 col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-body d-flex justify-content-between align-items-center">
+                <h5 id="productCounterStart" class="mb-0 text-body">Productos (0)</h5>
+                <button id="clearCartBtn" class="btn btn-sm btn-outline-danger">Vaciar carrito</button>
+              </div>
+              
+              <div class="card-body p-0">
+                <div id="product-detail" class="list-group list-group-flush">
+                  <!-- Listado de productos -->
+                </div>
+              </div>
+              
+              <div class="card-footer bg-transparent">
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="./tienda.html" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-2"></i>Seguir comprando
+                  </a>
+                  <div class="d-flex align-items-center gap-3">
+                    <span id="productCounterEnd" class="text-muted d-none d-md-block">0 productos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Métodos de envío -->
+            <div class="card border-0 shadow-sm mt-4">
+              <div class="card-header bg-body">
+                <h5 class="mb-0 text-body">Métodos de envío</h5>
+              </div>
+              <div class="card-body">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="shippingMethod" id="shippingMethod1" checked>
+                  <label class="form-check-label d-flex justify-content-between align-items-center" for="shippingMethod1">
+                    <div>
+                      <span class="d-block">Envío a domicilio</span>
+                      <small class="text-muted">Recibilo en 3-5 días hábiles</small>
+                    </div>
+                    <span class="fw-bold">$2.500</span>
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="shippingMethod" id="shippingMethod2">
+                  <label class="form-check-label d-flex justify-content-between align-items-center" for="shippingMethod2">
+                    <div>
+                      <span class="d-block">Retiro en sucursal</span>
+                      <small class="text-muted">Disponible en 24-48hs hábiles</small>
+                    </div>
+                    <span class="fw-bold text-success">Gratis</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="shippingMethod" id="shippingMethod3">
+                  <label class="form-check-label d-flex justify-content-between align-items-center" for="shippingMethod3">
+                    <div>
+                      <span class="d-block">Envío express</span>
+                      <small class="text-muted">Recibilo en 24hs (AMBA)</small>
+                    </div>
+                    <span class="fw-bold">$4.500</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Resumen de compra -->
+          <div class="col-12 col-lg-4">
+            <div class="card border-0 shadow-sm cart-summary">
+              <div class="card-header bg-body">
+                <h5 class="mb-0 text-body">Resumen de compra</h5>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Subtotal (<span id="cartProductsCount">0</span> productos)</span>
+                  <span id="cartSubtotal">$0,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Envío</span>
+                  <span id="cartSendPrice">$0,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                  <span>Descuento</span>
+                  <span class="text-success">-$0,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3 fw-bold">
+                  <span>Total</span>
+                  <span>$0,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3 text-success fw-bold">
+                  <span>Total con transferencia</span>
+                  <span>$0,00</span>
+                </div>
+                
+                <!-- Cupón de descuento -->
+                <div class="mb-4">
+                  <div class="d-flex gap-2">
+                    <input type="text" class="form-control coupon-input" placeholder="Código de descuento">
+                    <button class="btn btn-outline-secondary">Aplicar</button>
+                  </div>
+                </div>
+                
+                <!-- Métodos de pago -->
+                <h6 class="mb-3">Métodos de pago</h6>
+                <div class="row row-cols-2 g-2 mb-4">
+                  <div class="col">
+                    <div class="card payment-method-card active h-100">
+                      <div class="card-body p-2 text-center">
+                        <i class="bi bi-bank fs-3"></i>
+                        <p class="mb-0 small">Transferencia</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card payment-method-card h-100">
+                      <div class="card-body p-2 text-center">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <p class="mb-0 small">Tarjeta</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card payment-method-card h-100">
+                      <div class="card-body p-2 text-center">
+                        <i class="bi bi-cash-stack fs-3"></i>
+                        <p class="mb-0 small">Efectivo</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card payment-method-card h-100">
+                      <div class="card-body p-2 text-center">
+                        <i class="bi bi-wallet2 fs-3"></i>
+                        <p class="mb-0 small">Billetera</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <button class="btn btn-warning w-100 py-2 mb-2">
+                  Finalizar compra
+                </button>
+                <div class="text-center">
+                  <small class="text-muted">
+                    Al finalizar aceptas nuestros <a href="#" class="text-decoration-none">términos y condiciones</a>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carrito vacío (oculto por defecto) -->
+      <div id="cart-empty" class="d-none">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body cart-empty d-flex flex-column justify-content-center align-items-center text-center p-5">
+            <i class="bi bi-cart-x cart-empty-icon mb-4"></i>
+            <h3>Tu carrito está vacío</h3>
+            <p class="text-muted mb-4">¡Agrega productos para comenzar tu compra!</p>
+            <a href="./tienda.html" class="btn btn-warning px-4 py-2">
+              Ir a la tienda
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Productos recomendados -->
+      <div class="mt-5">
+        <h3 class="mb-4">También te puede interesar</h3>
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+          <!-- Producto recomendado 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="bg-white p-3">
+                <img src="../assets/images/products/1379687-400-400" class="card-img-top" alt="Remera Selección">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Remera Selección</h6>
+                <p class="card-text fw-bold mb-1">$85.990</p>
+                <p class="card-text text-success small">$73.100 con Transferencia</p>
+                <a href="./producto.html?id=6b42a7c585" class="btn btn-warning w-100">Ver producto</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Producto recomendado 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="bg-white p-3">
+                <img src="../assets/images/products/1138317-400-400" class="card-img-top" alt="Nike Run Swift 3">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Nike Run Swift 3</h6>
+                <p class="card-text fw-bold mb-1">$159.999</p>
+                <p class="card-text text-success small">$136.000 con Transferencia</p>
+                <a href="./producto.html?id=a0fb097ccc" class="btn btn-warning w-100">Ver producto</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Producto recomendado 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="bg-white p-3">
+                <img src="../assets/images/products/1262490-400-400" class="card-img-top" alt="Campera">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Campera</h6>
+                <p class="card-text fw-bold mb-1">$85.990</p>
+                <p class="card-text text-success small">$73.100 con Transferencia</p>
+                <a href="./producto.html?id=79e2def836" class="btn btn-warning w-100">Ver producto</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Producto recomendado 4 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="bg-white p-3">
+                <img src="../assets/images/products/1370408-400-400" class="card-img-top" alt="Zapatillas gris y blanco">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Zapatillas gris y blanco</h6>
+                <p class="card-text fw-bold mb-1">$65.990</p>
+                <p class="card-text text-success small">$56.100 con Transferencia</p>
+                <a href="./producto.html?id=b1c07afebf" class="btn btn-warning w-100">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="col-12 col-lg-10 mb-5">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../assets/images/products/1138317-400-400" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Nike Run Swift 3</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="fw-bold text-dark-emphasis m-0">$159.999</p>
+            <p class="m-0">9 cuotas de: <span class="text-dark-emphasis">$17.778</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-body-tertiary">
+    <ul class="d-flex flex-column list-unstyled px-4 m-0 justify-content-center text-center">
+      <li>&copy; 2024 KinetiX Sports. Todos los derechos reservados.</li>
+      <li>Av. 9 de Julio 200, Buenos Aires, Argentina.</li>
+      <li>Esta es una página de fantasía creada sin fines de lucro.</li>
+      <li>
+        Créditos a
+        <a class="text-decoration-none text-info" rel="noopener noreferrer" target="_blank"
+          href="https://www.linkedin.com/in/carlos-daniel-romero/">
+          Carlos Romero </a>.
+      </li>
+    </ul>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+  <script src="../js/scripts.js" type="module"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-import {actualizarBreadcrumb,cargarProductos,cargarDetalleProducto} from "./pageRenderer.js";
+import {actualizarBreadcrumb,cargarProductos,cargarDetalleProducto, cargarCarrito} from "./pageRenderer.js";
 import {showCart} from "./cart.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -6,16 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // console.log("Cargando scripts...")
 
   // Lógica para cada página
-  if (path.includes("producto.html")) {
-    cargarDetalleProducto();
-    // addButtonEvent();
-  } else if (path.includes("tienda.html")) {
-    actualizarBreadcrumb();
-    cargarProductos();
-  } else if (path.includes("index.html")) {
+  if (path.includes("/index.html")) {
     // cargarTopProductos();
     // initSwiper();
-  }
+  } else if (path.includes("/pages/producto.html")) {
+    cargarDetalleProducto();
+  } else if (path.includes("/pages/tienda.html")) {
+    actualizarBreadcrumb();
+    cargarProductos();
+  } else if (path.includes("/pages/carrito.html")) {
+    cargarCarrito();
+  } 
 
   try {
     AOS.init();
@@ -25,5 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("shoppingCartBtn").onclick = function () {
-  showCart();
+  window.location.href = "../pages/carrito.html";
 };
+

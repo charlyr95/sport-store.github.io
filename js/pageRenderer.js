@@ -1,4 +1,4 @@
-import {addButtonEvent} from "./cart.js";
+import {addEventCarrito, addEventProduct, getCartItems, getTotalProducts, getTotalPrice} from "./cart.js";
 
 // Utilizado para simular el backend y base de datos
 export function cargarTopProductos() {
@@ -130,6 +130,68 @@ export function cargarProductos() {
     })
     .catch((error) => console.error("Error al cargar el JSON:", error));
 }
+// Utilizado para simular el backend y base de datos
+export function cargarCarrito() {
+  // Obtener el ID del producto desde la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productGender = urlParams.get("gender"); // Ruta del archivo JSON
+
+  const jsonUrl = "../js/products-database.json";
+
+  // Contenedores
+  const cartContainer = document.getElementById("product-detail");
+  const cartCounter1 = document.getElementById("productCounterStart");
+  const cartCounter2 = document.getElementById("productCounterEnd");
+
+  // Función para cargar datos desde el JSON
+  const carrito = getCartItems();
+  console.log(carrito);
+  cartContainer.innerHTML = ""; // Limpia el contenedor antes de agregar productos
+
+  carrito.forEach((product, index) => {
+    const card = `
+                  <div class="list-group-item cart-item bg-transparent py-3">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <img src="../assets/images/products/${product.main_image}" alt="${product.title}" class="cart-item-img rounded border">
+                      </div>
+                      <div class="col">
+                        <div class="d-flex flex-column">
+                          <span class="text-muted small">${product.vendor}</span>
+                          <h6 class="mb-1">${product.title}</h6>
+                          <!-- <span class="text-muted small">Talle: 42</span>
+                          <span class="text-muted small">Color: Negro/Blanco</span>-->
+                        </div>
+                      </div>
+                      <div class="col-auto col-md-2">
+                        <!--<div class="input-group input-group-sm quantity-selector">
+                          <button class="btn btn-outline-secondary" type="button">-</button>
+                          <input type="number" class="form-control text-center" value="1" min="1" max="10">
+                          <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>-->
+                      </div>
+                      <div class="col-auto col-md-2 text-end">
+                        <div class="d-flex flex-column">
+                          <span class="fw-bold">$${product.price.toLocaleString("es-AR")}</span>
+                          <small class="text-warning">$${(Math.round(product.price * 0.0085) * 100).toLocaleString("es-AR")} con Transferencia</small>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <i class="bi bi-x-lg remove-item" title="Eliminar producto"></i>
+                      </div>
+                    </div>
+                  </div>
+              `;
+
+          cartContainer.innerHTML += card;
+          addEventCarrito();
+          const TotalProducts = getTotalProducts();
+          cartCounter1.textContent = `Productos (${TotalProducts})`;
+          cartCounter2.textContent = `${TotalProducts} productos`;
+
+        }
+  );
+}
 
 export function cargarDetalleProducto() {
   // Obtener el ID del producto desde la URL
@@ -209,7 +271,7 @@ export function cargarDetalleProducto() {
 
           // Insertar el detalle en el contenedor
           container.innerHTML = productDetail;
-          addButtonEvent();
+          addEventProduct();
         } else {
           // Si el producto no se encuentra
           container.innerHTML = `<p class="text-danger">Producto no encontrado.</p>`;
