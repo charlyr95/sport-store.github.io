@@ -196,9 +196,11 @@
           <button class="btn btn-outline-light" type="button" aria-label="Cuenta de usuario">
             <i class="bi bi-person"></i>
           </button>
-          <button id="shoppingCartBtn" class="btn btn-outline-light" type="button" aria-label="Carrito de compras">
-            <i class="bi bi-cart2"></i>
-          </button>
+          <a href="../pages/carrito.html">
+            <button id="shoppingCartBtn" class="btn btn-outline-light" type="button" aria-label="Carrito de compras">
+              <i class="bi bi-cart2"></i>
+            </button>
+          </a>
           <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
             aria-label="Abrir menú de navegación">
@@ -296,7 +298,7 @@
             </div>
             
             <!-- Métodos de envío -->
-            <div class="card border-0 shadow-sm mt-4">
+            <!-- <div class="card border-0 shadow-sm mt-4">
               <div class="card-header bg-body">
                 <h5 class="mb-0 text-body">Métodos de envío</h5>
               </div>
@@ -308,7 +310,7 @@
                       <span class="d-block">Envío a domicilio</span>
                       <small class="text-muted">Recibilo en 3-5 días hábiles</small>
                     </div>
-                    <span class="fw-bold">$2.500</span>
+                    <span class="fw-bold">$8.500</span>
                   </label>
                 </div>
                 <div class="form-check mb-3">
@@ -328,15 +330,15 @@
                       <span class="d-block">Envío express</span>
                       <small class="text-muted">Recibilo en 24hs (AMBA)</small>
                     </div>
-                    <span class="fw-bold">$4.500</span>
+                    <span class="fw-bold">$12.500</span>
                   </label>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <!-- Resumen de compra -->
-          <div class="col-12 col-lg-4">
+          <!-- <div class="col-12 col-lg-4">
             <div class="card border-0 shadow-sm cart-summary">
               <div class="card-header bg-body">
                 <h5 class="mb-0 text-body">Resumen de compra</h5>
@@ -361,18 +363,18 @@
                 <div class="d-flex justify-content-between mb-3 text-success fw-bold">
                   <span>Total con transferencia</span>
                   <span>$0,00</span>
-                </div>
+                </div> -->
                 
                 <!-- Cupón de descuento -->
-                <div class="mb-4">
+                <!-- <div class="mb-4">
                   <div class="d-flex gap-2">
                     <input type="text" class="form-control coupon-input" placeholder="Código de descuento">
                     <button class="btn btn-outline-secondary">Aplicar</button>
                   </div>
-                </div>
+                </div> -->
                 
                 <!-- Métodos de pago -->
-                <h6 class="mb-3">Métodos de pago</h6>
+                <!-- <h6 class="mb-3">Métodos de pago</h6>
                 <div class="row row-cols-2 g-2 mb-4">
                   <div class="col">
                     <div class="card payment-method-card active h-100">
@@ -418,7 +420,8 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
       
@@ -439,65 +442,348 @@
       <!-- Productos recomendados -->
       <div class="mt-5">
         <h3 class="mb-4">También te puede interesar</h3>
-        <div class="row row-cols-2 row-cols-md-4 g-4">
-          <!-- Producto recomendado 1 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="bg-white p-3">
-                <img src="../assets/images/products/1379687-400-400" class="card-img-top" alt="Remera Selección">
+        <div class="swiper-container">
+          <!-- Slider main container -->
+          <div class="swiper mySwiper" style="--swiper-navigation-color: #FFF">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper py-3" id="swiper-wrapper">
+               
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1379687-400-400" loading="lazy" class="card-img-top main-image" alt="Remera Selección" >
+                            <img src="../assets/images/products/1379688-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Remera Selección">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Adidas</div>
+                          <div class="product-title fw-bold">Remera Selección</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$85.990</span></li>
+                            <li>9 cuotas de: <span class="text-dark-emphasis">$9.554</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$73.100</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=6b42a7c585" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <h6 class="card-title">Remera Selección</h6>
-                <p class="card-text fw-bold mb-1">$85.990</p>
-                <p class="card-text text-success small">$73.100 con Transferencia</p>
-                <a href="./producto.html?id=6b42a7c585" class="btn btn-warning w-100">Ver producto</a>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1288750-400-400" loading="lazy" class="card-img-top main-image" alt="Pantalón corto hombre">
+                            <img src="../assets/images/products/1288751-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Pantalón corto hombre">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Nike</div>
+                          <div class="product-title fw-bold">Pantalón corto hombre</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$55.990</span></li>
+                            <li>9 cuotas de: <span class="text-dark-emphasis">$6.221</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$47.600</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=4ee27e30f0" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1379674-400-400" loading="lazy" class="card-img-top main-image" alt="Pantalón Selección Corto">
+                            <img src="../assets/images/products/1379675-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Pantalón Selección Corto">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Adidas</div>
+                          <div class="product-title fw-bold">Pantalón Selección Corto</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$45.990</span></li>
+                            <li>6 cuotas de: <span class="text-dark-emphasis">$7.665</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$39.100</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=4555cf81e8" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1287400-400-400" loading="lazy" class="card-img-top main-image" alt="Remera">
+                            <img src="../assets/images/products/1287401-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Remera">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Nike</div>
+                          <div class="product-title fw-bold">Remera</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$49.990</span></li>
+                            <li>6 cuotas de: <span class="text-dark-emphasis">$8.332</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$42.500</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=e5a43c9eec" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1225238-400-400" loading="lazy" class="card-img-top main-image" alt="Short mujer">
+                            <img src="../assets/images/products/1225239-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Short mujer">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Adidas</div>
+                          <div class="product-title fw-bold">Short mujer</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$29.990</span></li>
+                            <li>6 cuotas de: <span class="text-dark-emphasis">$4.998</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$25.500</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=e377dabcbb" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1225213-400-400" loading="lazy" class="card-img-top main-image" alt="Remera">
+                            <img src="../assets/images/products/1225214-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Remera">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Adidas</div>
+                          <div class="product-title fw-bold">Remera</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$45.500</span></li>
+                            <li>1 cuotas de: <span class="text-dark-emphasis">$45.500</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$38.700</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=cc393a740b" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1299683-400-400" loading="lazy" class="card-img-top main-image" alt="Duramo Sl adidas Sport 78">
+                            <img src="../assets/images/products/1299684-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Duramo Sl adidas Sport 78">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Adidas</div>
+                          <div class="product-title fw-bold">Duramo Sl adidas Sport 78</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$99.999</span></li>
+                            <li>9 cuotas de: <span class="text-dark-emphasis">$11.111</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$85.000</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=71245f94ea" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1315004-400-400" loading="lazy" class="card-img-top main-image" alt="Remera hombre">
+                            <img src="../assets/images/products/1315005-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Remera hombre">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Under Armour</div>
+                          <div class="product-title fw-bold">Remera hombre</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$27.800</span></li>
+                            <li>3 cuotas de: <span class="text-dark-emphasis">$9.267</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$23.600</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=09de0000ff" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1138317-400-400" loading="lazy" class="card-img-top main-image" alt="Nike Run Swift 3">
+                            <img src="../assets/images/products/1138318-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Nike Run Swift 3">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Nike</div>
+                          <div class="product-title fw-bold">Nike Run Swift 3</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$159.999</span></li>
+                            <li>9 cuotas de: <span class="text-dark-emphasis">$17.778</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$136.000</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=a0fb097ccc" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="product-item z-1 pb-5">
+                  <div class="product-card-container h-100">
+                    <div class="h-100 position-relative p-0">
+                      <div class="card h-100 border-sm-bottom-0" style="border-radius: 0 !important;">
+                        <div class="product-img border-bottom bg-white">
+                          <div class="card-image-container position-relative overflow-hidden">
+                            <img src="../assets/images/products/1230557-400-400" loading="lazy" class="card-img-top main-image" alt="Puma Skyrocket Lite Adp">
+                            <img src="../assets/images/products/1230558-400-400" loading="lazy" class="card-img-top hover-image position-absolute top-0 start-0 w-100 h-100" alt="Puma Skyrocket Lite Adp">
+                          </div>
+                        </div>
+                        <div class="card-body bg-body-tertiary d-flex flex-column gap-1 py-2">
+                          <div class="product-vendor text-muted">Puma</div>
+                          <div class="product-title fw-bold">Puma Skyrocket Lite Adp</div>
+                          <ul class="list-unstyled mt-auto mb-0">
+                            <li><span class="text-dark-emphasis fw-bold">$89.999</span></li>
+                            <li>12 cuotas de: <span class="text-dark-emphasis">$7.500</span></li>
+                            <li><span class="text-dark-emphasis fw-bold">$76.500</span> <small class="text-muted">con Transferencia</small></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="m-0 p-0 z-2">
+                        <div class="buy-button bg-body-tertiary top-0 z-2">
+                          <div class="p-4 pt-1 z-2">
+                            <a href="./pages/producto.html?id=746a2d5fb2" class="btn btn-warning w-100 z-5" role="button"> Ver producto </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
             </div>
-          </div>
-          
-          <!-- Producto recomendado 2 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="bg-white p-3">
-                <img src="../assets/images/products/1138317-400-400" class="card-img-top" alt="Nike Run Swift 3">
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Nike Run Swift 3</h6>
-                <p class="card-text fw-bold mb-1">$159.999</p>
-                <p class="card-text text-success small">$136.000 con Transferencia</p>
-                <a href="./producto.html?id=a0fb097ccc" class="btn btn-warning w-100">Ver producto</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Producto recomendado 3 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="bg-white p-3">
-                <img src="../assets/images/products/1262490-400-400" class="card-img-top" alt="Campera">
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Campera</h6>
-                <p class="card-text fw-bold mb-1">$85.990</p>
-                <p class="card-text text-success small">$73.100 con Transferencia</p>
-                <a href="./producto.html?id=79e2def836" class="btn btn-warning w-100">Ver producto</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Producto recomendado 4 -->
-          <div class="col">
-            <div class="card h-100">
-              <div class="bg-white p-3">
-                <img src="../assets/images/products/1370408-400-400" class="card-img-top" alt="Zapatillas gris y blanco">
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Zapatillas gris y blanco</h6>
-                <p class="card-text fw-bold mb-1">$65.990</p>
-                <p class="card-text text-success small">$56.100 con Transferencia</p>
-                <a href="./producto.html?id=b1c07afebf" class="btn btn-warning w-100">Ver producto</a>
-              </div>
-            </div>
+  
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev text-shadow-sm" style="scale: 0.7 !important;"></div>
+            <div class="swiper-button-next text-shadow-sm" style="scale: 0.7 !important;"></div>
+  
           </div>
         </div>
       </div>
@@ -545,6 +831,57 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
   <script src="../js/scripts.js" type="module"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 2,
+    spaceBetween: 10,
+    grabCursor: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1400: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      1600: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+      1920: {
+        slidesPerView: 6,
+        spaceBetween: 10,
+      },
+      2560: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+      },
+      3440: {
+        slidesPerView: 7,
+        spaceBetween: 30,
+      },
+    },
+  });
+  </script>
 </body>
 
 </html>

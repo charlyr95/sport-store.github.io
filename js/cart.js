@@ -17,6 +17,7 @@ export function saveCart(cart) {
 
 export function clearCart() {
   localStorage.removeItem(cartKey);
+  location.reload();
 }
 
 // Agregar producto al carrito

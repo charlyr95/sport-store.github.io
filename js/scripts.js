@@ -25,7 +25,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.getElementById("shoppingCartBtn").onclick = function () {
-  window.location.href = "../pages/carrito.html";
-};
-
