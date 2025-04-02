@@ -1,5 +1,5 @@
 import {actualizarBreadcrumb,cargarProductos,cargarDetalleProducto, cargarCarrito} from "./pageRenderer.js";
-import {showCart,updateCartBadge} from "./cart.js";
+import {updateCartBadge} from "./cart.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   actualizarPagina();

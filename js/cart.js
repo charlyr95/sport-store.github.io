@@ -18,7 +18,6 @@ export function saveCart(cart) {
 
 export function clearCart() {
   localStorage.removeItem(cartKey);
-  location.reload();
 }
 
 // Agregar producto al carrito
@@ -48,23 +47,15 @@ export function getTotalPrice() {
 }
 
 // Eliminar producto del carrito
-export function removeFromCart(productId) {
+export function removeFromCart(index) {
   const cart = loadCart();
-  cart = cart.filter((item) => item.product_id !== productId);
+  cart.splice(index, 1);
   saveCart(cart);
 }
 
 // Obtener productos en el carrito
 export function getCartItems() {
   return loadCart();
-}
-
-// Mostrar productos en consola (para debug)
-export function showCart() {
-  const cart = getCartItems();
-  const sCart = cart.join("\r\n");
-  alert(`🛒 Carrito:\r\n${sCart}`);
-  console.log(cart);
 }
 
 // Simular obtención de producto desde un JSON local o base de datos
@@ -103,14 +94,25 @@ export function addEventProduct() {
 // Evento para botón "Agregar al carrito"
 export function addEventCarrito() {
   const clearCartBtn = document.getElementById("clearCartBtn");
+  const removeButtons = document.getElementsByClassName("remove-item__button");
 
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", () => {
       clearCart();
-      // alert("🛒 El carrito ha sido vaciado.");
+      cargarCarrito();
     });
   } else {
     console.error("El botón de agregar al carrito no se encontró en el DOM.");
+  }
+
+  if (removeButtons) {
+    Array.from(removeButtons).forEach((button) => {
+      button.addEventListener("click", function () {
+        const itemId = this.dataset.id;
+        removeFromCart(itemId);
+        cargarCarrito();
+      });
+    });
   }
 }
 

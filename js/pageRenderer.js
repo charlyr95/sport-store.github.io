@@ -142,11 +142,24 @@ export function cargarCarrito() {
   const cartContainer = document.getElementById("product-detail");
   const cartCounter1 = document.getElementById("productCounterStart");
   const cartCounter2 = document.getElementById("productCounterEnd");
-
+  
   // Función para cargar datos desde el JSON
   const carrito = getCartItems();
   console.log(carrito);
   cartContainer.innerHTML = ""; // Limpia el contenedor antes de agregar productos
+  
+  const emptyCart = document.getElementById("cart-empty");
+  const cartItems = document.getElementById("cart-with-items");
+  
+if(carrito.length === 0) {
+  emptyCart.style.display = "block";
+  cartItems.style.display = "none";
+} else {
+  cartItems.style.display = "block";
+  emptyCart.style.display = "none";
+}
+
+
 
   carrito.forEach((product, index) => {
     const card = `
@@ -176,9 +189,11 @@ export function cargarCarrito() {
                           <small class="text-warning">$${(Math.round(product.price * 0.0085) * 100).toLocaleString("es-AR")} con Transferencia</small>
                         </div>
                       </div>
-                      <!--<div class="col-auto">
-                        <i class="bi bi-x-lg remove-item" title="Eliminar producto"></i>
-                      </div>-->
+                      <div class="col-auto">
+                        <button class="remove-item__button bg-body border-0" data-id="${index}">
+                          <i class="bi bi-x-lg remove-item p-1" title="Eliminar producto"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
               `;
