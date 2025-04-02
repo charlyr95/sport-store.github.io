@@ -176,9 +176,9 @@ export function cargarCarrito() {
                           <small class="text-warning">$${(Math.round(product.price * 0.0085) * 100).toLocaleString("es-AR")} con Transferencia</small>
                         </div>
                       </div>
-                      <div class="col-auto">
+                      <!--<div class="col-auto">
                         <i class="bi bi-x-lg remove-item" title="Eliminar producto"></i>
-                      </div>
+                      </div>-->
                     </div>
                   </div>
               `;
