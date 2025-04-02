@@ -18,6 +18,7 @@ export function saveCart(cart) {
 
 export function clearCart() {
   localStorage.removeItem(cartKey);
+  updateCartBadge();
 }
 
 // Agregar producto al carrito
