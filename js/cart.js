@@ -32,7 +32,13 @@ export function addToCart(product) {
 
   cart.push(product);
   saveCart(cart);
-  alert(`🛒 ${product.title} agregado al carrito.`);
+  Swal.fire({
+    icon: 'success',
+    title: `${product.title}`,
+    text: `Agregado al carrito`,
+    timer: 1500,
+    timerProgressBar: true
+  });
 }
 
 // Obtiene la cantidad total de productos en el carrito
@@ -99,8 +105,21 @@ export function addEventCarrito() {
 
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", () => {
-      clearCart();
-      cargarCarrito();
+      Swal.fire({
+        title: '¿Quieres vaciar el carrito?',
+        text: "Eliminarás todos los productos del carrito",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#dc3545',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          clearCart();
+          cargarCarrito();
+        }
+      });
     });
   } else {
     console.error("El botón de agregar al carrito no se encontró en el DOM.");
@@ -110,8 +129,21 @@ export function addEventCarrito() {
     Array.from(removeButtons).forEach((button) => {
       button.addEventListener("click", function () {
         const itemId = this.dataset.id;
-        removeFromCart(itemId);
-        cargarCarrito();
+        Swal.fire({
+          title: '¿Quieres quitar este producto?',
+          text: "Puedes guardarlo para después si lo prefieres",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#dc3545',
+          cancelButtonColor: '#6c757d',
+          confirmButtonText: 'Eliminar',
+          cancelButtonText: 'Cancelar'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            removeFromCart(itemId);
+            cargarCarrito();
+          }
+        });
       });
     });
   }
