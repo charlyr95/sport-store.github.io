@@ -17,3 +17,7 @@ Entrega 2:
   - Se corrige el código en javascript.
   - Correcciones menores referidas al momento de ejecución de los scripts.
   - Lo anterior contempla las consignas de esta entrega.
+
+Entrega Final:
+  - Se eliminan los alerts y console log
+  - Se utiliza la libería SweetAlert2 para dar feedback a las acciones del usuario referidas al carrito de compras.
